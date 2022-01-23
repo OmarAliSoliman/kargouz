@@ -13,10 +13,52 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/bootstrap-select-country.min.css">
   <link rel="stylesheet" href="./assets/css/icons.css">
-  <title>Document</title>
+  <title>Home</title>
 </head>
 
 <body>
+
+  <!-- my sidenav -->
+   <!-- sidenav -->
+   <div class="bg-sidenavOpen"></div>
+
+
+   <div id="mySidenav" class="sidenav">
+     <div class="">
+       <div class="logo">
+         <img src="./assets/images/logo.svg" alt="">
+       </div>
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+         <i class="fas fa-times"></i>
+       </a>
+       <ul class="links list-unstyled">
+         <li class="active"><a href="#process">Process</a></li>
+         <li><a href="#integration">Integration</a></li>
+         <li><a href="#services">Services</a></li>
+         <li><a href="#work">Work</a></li>
+         <li><a href="#virtual">Virtual</a></li>
+         <li><a href="#buzz">The Buzz</a></li>
+         <li><a href="#connect">Connect</a></li>
+       </ul>
+       <!-- <div class="lang">
+         <a href="<?php echo $baseURL.$navBarLang ?>">Arabic</a>
+       </div> -->
+       <div class="social">
+         <ul class="list-unstyled">
+           <li><a target="_blank" href=""><i
+                 class="fab fa-youtube"></i></a></li>
+           <li><a target="_blank" href=""><i
+                 class="fab fa-facebook-f"></i></a></li>
+           <li><a target="_blank" href=""><i
+                 class="fab fa-instagram"></i></a></li>
+           <li><a target="_blank" href=""><i
+                 class="fab fa-linkedin-in"></i></a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ 
+ 
 
   <!-- navbar -->
 
@@ -28,9 +70,17 @@
         </div>
         <div class="links">
           <ul class="list-unstyled mainlist">
-            <li><a href="">الشحن الجوي</a></li>
-            <li><a href="">الشحن البحري</a></li>
-            <li><a href="">خدماتنا</a></li>
+            <li><a href="">الشحن الجوي</a><i class="fas fa-caret-down"></i>
+              <div class="submenue">
+                <ul class="list-unstyled">
+                  <li><a href="">الرابط الاول طويل للتجربه</a></li>
+                  <li><a href="">الرابط الثاني</a></li>
+                  <li><a href="">الرابط الثالث</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="">الشحن البحري</a><i class="fas fa-caret-down"></i></li>
+            <li><a href="">خدماتنا</a><i class="fas fa-caret-down"></i></li>
             <li><a href="">تجميع الشحنات</a></li>
             <li><a href="">اشتري لي</a></li>
           </ul>
@@ -38,7 +88,8 @@
         <div class="languge">
           <ul class="list-unstyled mainlist">
             <li><a href="">English</a></li>
-            <li> <a class="parentlink currancy"> <span> EGP </span> <img src="./assets/images/egypt.svg" alt=""> </a>
+            <li><span class="line"></span></li>
+            <li> <a class="parentlink currancy"> <i class="fas fa-caret-down"></i> <span> EGP </span> <img src="./assets/images/egypt.svg" alt=""> </a>
             </li>
           </ul>
         </div>
@@ -48,6 +99,9 @@
                 <span>الاشتراك</span> </a></li>
             <li class="login"><a href="">تسجيل الدخول</a></li>
           </ul>
+        </div>
+        <div class="mobile-icon" onclick="openNav()">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
     </div>
@@ -133,7 +187,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 ordercoulmn">
           <div class="shipping-image">
             <img src="./assets/images/shippimg.png" alt="">
             <div class="ship-btn">
@@ -272,7 +326,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4 middlecard">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/card-1.png" alt="">
+              <img src="./assets/images/cartoon-hand-holding-photo-camer-purple-background-with-copy-space-3d-render-illustration.png" alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -289,7 +343,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/card-1.png" alt="">
+              <img src="./assets/images/card2.png" alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -306,7 +360,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/card-1.png" alt="">
+              <img src="./assets/images/card3.png" alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -323,7 +377,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4 middlecard">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/card-1.png" alt="">
+              <img src="./assets/images/card4.png" alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -340,7 +394,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/card-1.png" alt="">
+              <img src="./assets/images/card5.png" alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -357,6 +411,34 @@
       </div>
     </div>
   </section>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="wrapper">
+        <div class="logo">
+          <a href=""><img src="./assets/images/logo.svg" alt=""></a>
+        </div>
+        <div class="links">
+          <ul class="list-unstyled">
+            <li><a href="">الشحن الجوي</a> <i class="fas fa-caret-down"></i>
+              <div class="submenue">
+                <ul class="list-unstyled">
+                  <li><a href="">الرابط الاول طويل للتجربه</a></li>
+                  <li><a href="">الرابط الثاني</a></li>
+                  <li><a href="">الرابط الثالث</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="">الشحن البحري</a> <i class="fas fa-caret-down"></i></li>
+            <li><a href="">خدماتنا</a> <i class="fas fa-caret-down"></i></li>
+            <li><a href="">تجميع الشحنات</a></li>
+            <li><a href="">اشتري لي</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="./assets/js/jquery-3.3.1.min.js"></script>

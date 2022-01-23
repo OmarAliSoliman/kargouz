@@ -29,11 +29,20 @@ $(document).ready(function () {
             arrows: false,
             centerMode: false,
             centerPadding: '40px',
-            slidesToShow: 2.2
+            slidesToShow:5
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 991,
+          settings: {
+            arrows: false,
+            centerMode: false,
+            centerPadding: '40px',
+            slidesToShow:4
+          }
+        },
+        {
+          breakpoint: 524,
           settings: {
             arrows: false,
             centerMode: true,
