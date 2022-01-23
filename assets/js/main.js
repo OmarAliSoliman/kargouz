@@ -86,6 +86,24 @@ $(document).ready(function () {
   });
 
 
+  if($(".countries").length)
+  $(".countries .country").map((index, con)=>{
+    $(con).on('click', function(){
+      let country = $(this).text();
+      let newsrc = $(this).find('img').attr('src')
+      let newtext = $(this).find('span').text();
+      $(this).closest(".form-group-parent").find("input").val(newtext);
+      $(this).closest(".form-group-parent").find(".chosen-country img").attr('src', newsrc)
+      $(this).closest(".form-group-parent").find(".chosen-country span").text(newtext);
+    })
+  })
+
+  if($(".chosen-country").length){
+    $(".chosen-country").on('click', function(){
+      $(this).closest(".form-group-parent").find(".countries").slideToggle();
+    })
+  }
+
 });
 
 function openNav() {
