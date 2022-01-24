@@ -19,46 +19,74 @@
 <body>
 
   <!-- my sidenav -->
-   <!-- sidenav -->
-   <div class="bg-sidenavOpen"></div>
+  <!-- sidenav -->
+  <div class="bg-sidenavOpen"></div>
 
 
-   <div id="mySidenav" class="sidenav">
-     <div class="">
-       <div class="logo">
-         <img src="./assets/images/logo.svg" alt="">
-       </div>
-       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-         <i class="fas fa-times"></i>
-       </a>
-       <ul class="links list-unstyled">
-         <li class="active"><a href="#process">Process</a></li>
-         <li><a href="#integration">Integration</a></li>
-         <li><a href="#services">Services</a></li>
-         <li><a href="#work">Work</a></li>
-         <li><a href="#virtual">Virtual</a></li>
-         <li><a href="#buzz">The Buzz</a></li>
-         <li><a href="#connect">Connect</a></li>
-       </ul>
-       <!-- <div class="lang">
+  <div class="splash">
+    <div class="loading-container">
+      <div class="loading-text">
+        <span>K</span>
+        <span>A</span>
+        <span>R</span>
+        <span>G</span>
+        <span>O</span>
+        <span>U</span>
+        <span>Z</span>
+      </div>
+    </div>
+    <!-- <div class="socials">
+      <a class="social-link" href="https://twitter.com/aybukeceylan" target="_top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+        </svg>
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/ayb%C3%BCkeceylan/" target="_top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div> -->
+  </div>
+
+
+
+  <div id="mySidenav" class="sidenav">
+    <div class="">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="">
+      </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <i class="fas fa-times"></i>
+      </a>
+      <ul class="list-unstyled links">
+        <li class="parentsub active"><a><span>الشحن الجوي </span><i class="fas fa-caret-down"></i></a>
+          <div class="submenue">
+            <ul class="list-unstyled">
+              <li><a href="">الرابط الاول طويل للتجربه</a></li>
+              <li><a href="">الرابط الثاني</a></li>
+              <li><a href="">الرابط الثالث</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="parentsub"><a><span>الشحن البحري</span> <i class="fas fa-caret-down"></i></a></li>
+        <li class="parentsub"><a> <span>خدماتنا</span> <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="">تجميع الشحنات</a></li>
+        <li><a href="">اشتري لي</a></li>
+      </ul>
+      <!-- <div class="lang">
          <a href="<?php echo $baseURL.$navBarLang ?>">Arabic</a>
        </div> -->
-       <div class="social">
-         <ul class="list-unstyled">
-           <li><a target="_blank" href=""><i
-                 class="fab fa-youtube"></i></a></li>
-           <li><a target="_blank" href=""><i
-                 class="fab fa-facebook-f"></i></a></li>
-           <li><a target="_blank" href=""><i
-                 class="fab fa-instagram"></i></a></li>
-           <li><a target="_blank" href=""><i
-                 class="fab fa-linkedin-in"></i></a></li>
-         </ul>
-       </div>
-     </div>
-   </div>
- 
- 
+      <div class="social">
+        <ul class="list-unstyled">
+          <li><a target="_blank" href=""><i class="fab fa-youtube"></i></a></li>
+          <li><a target="_blank" href=""><i class="fab fa-facebook-f"></i></a></li>
+          <li><a target="_blank" href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a target="_blank" href=""><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- navbar -->
 
@@ -70,17 +98,17 @@
         </div>
         <div class="links">
           <ul class="list-unstyled mainlist">
-            <li class="mainli"><a href="">الشحن الجوي</a><i class="fas fa-caret-down"></i>
+            <li class="mainli"><a>الشحن الجوي</a><i class="fas fa-caret-down"></i>
               <div class="submenue">
                 <ul class="list-unstyled">
                   <li><a href="">الرابط الاول طويل للتجربه</a></li>
-                  <li><a href="">الرابط الثاني</a></li>
+                  <li><a href="./personal-air-freight.html">الشحن الشخصي - الجوي</a></li>
                   <li><a href="">الرابط الثالث</a></li>
                 </ul>
               </div>
             </li>
-            <li class="mainli"><a href="">الشحن البحري</a><i class="fas fa-caret-down"></i></li>
-            <li class="mainli"><a href="">خدماتنا</a><i class="fas fa-caret-down"></i></li>
+            <li class="mainli"><a>الشحن البحري</a><i class="fas fa-caret-down"></i></li>
+            <li class="mainli"><a>خدماتنا</a><i class="fas fa-caret-down"></i></li>
             <li class="mainli"><a href="">تجميع الشحنات</a></li>
             <li class="mainli"><a href="">اشتري لي</a></li>
           </ul>
@@ -89,19 +117,22 @@
           <ul class="list-unstyled mainlist">
             <li class="lang"><a href="">English</a></li>
             <li><span class="line"></span></li>
-            <li class="curr"> <a class="parentlink currancy"> <i class="fas fa-caret-down"></i> <span> EGP </span> <img src="./assets/images/egypt.svg" alt=""> </a>
+            <li class="curr"> <a class="parentlink currancy" data-bs-toggle="modal" data-bs-target="#currencyModal"> <i
+                  class="fas fa-caret-down"></i> <span> EGP </span> <img src="./assets/images/egypt.svg" alt=""> </a>
             </li>
           </ul>
         </div>
         <div class="login">
           <ul class="list-unstyled mainlist">
-            <li class="sgn"><a href="" class="parentlink signup"> <img src="./assets/images/Icon feather-user.svg" alt="">
+            <li class="sgn"><a href="" class="parentlink signup"> <img src="./assets/images/Icon feather-user.svg"
+                  alt="">
                 <span>الاشتراك</span> </a></li>
             <li class="login"><a href="">تسجيل الدخول</a></li>
           </ul>
         </div>
         <div class="mobile-icon" onclick="openNav()">
-          <i class="fas fa-bars"></i>
+          <!-- <i class="fas fa-bars"></i> -->
+          <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt="">
         </div>
       </div>
     </div>
@@ -173,7 +204,7 @@
                   <div class="col-sm-12 col-lg-12">
                     <div class="form-group">
                       <label for="shapetype">نوع الشحنة</label>
-                      <select name="" id="" class="form-control ">
+                      <select name="" id="" class="form-control customselect ">
                         <option value="">اختر نوع الشحن</option>
                         <option>شحن شخصي</option>
                         <option>شحن تجاري</option>
@@ -184,29 +215,32 @@
                   <div class="col-sm-12 col-lg-12">
                     <div class="form-group">
                       <label for="shapetype">طريقه الشحن</label>
-                      <select name="" id="" class="form-control ">
+                      <select name="" id="" class="form-control customselect ">
                         <option value="">طريقه الشحن </option>
                         <option>شحن جوي</option>
                         <option>شحن بحري</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-6">
+                  <div class="col-sm-12 col-md-12 col-lg-7">
                     <div class="form-group">
                       <label for="shapekg">وزن الشحنه</label>
-                      <div class="input-group mb-3">
+                      <div class="input-group">
                         <input type="text" class="form-control" id="shapekg" placeholder="وزن الشحنه">
-                        <select class="input-group-text" id="basic-addon2">
+                        <select class="input-group-text customselect" id="basic-addon2">
                           <option value="">Kg</option>
-                          <option value="">BOUND</option>
+                          <option value="">LBS</option>
                         </select>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-6">
-                   <div class="dimentions">
-                      <a> <img src="./assets/images/dimentios.svg" alt=""> <span>ادخل ابعاد الشحنه</span></a>
-                   </div>
+                  <div class="col-sm-12 col-md-12 col-lg-5">
+                    <div class="form-group dimentionsparent">
+                      <label for=""></label>
+                      <div class="dimentions">
+                        <a> <img src="./assets/images/dimentios.svg" alt=""> <span>ادخل ابعاد الشحنه</span></a>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="enterdimentions">
@@ -246,7 +280,8 @@
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="btn-submit">
-                      <button type="submit" class="mainbtn btn"><span>عرض الاسعار</span><img src="./assets/images/Path 11852.svg" alt=""></button>
+                      <button type="submit" class="mainbtn btn"><span>عرض الاسعار</span><img
+                          src="./assets/images/Path 11852.svg" alt=""></button>
                     </div>
                   </div>
                 </div>
@@ -287,8 +322,9 @@
           <div class="shipping-image">
             <img src="./assets/images/shippimg.png" alt="">
             <div class="ship-btn">
-              <button class="btn mainbtn"><img src="./assets/images/Icon feather-play-circle.svg" alt=""><span>فيديو
-                  تفصيلي</span></button>
+              <a class="btn mainbtn html5lightbox" href="https://www.youtube.com/watch?v=paxGiEt-FoE"><img
+                  src="./assets/images/Icon feather-play-circle.svg" alt=""><span>فيديو
+                  تفصيلي</span></a>
               <a href="" class="btn secondbtn">الذهاب إلى مركز التجميع</a>
             </div>
           </div>
@@ -422,7 +458,9 @@
         <div class="col-sm-12 col-md-6 col-lg-4 middlecard">
           <div class="site-card">
             <div class="card-img">
-              <img src="./assets/images/cartoon-hand-holding-photo-camer-purple-background-with-copy-space-3d-render-illustration.png" alt="">
+              <img
+                src="./assets/images/cartoon-hand-holding-photo-camer-purple-background-with-copy-space-3d-render-illustration.png"
+                alt="">
             </div>
             <div class="card-body">
               <h5 class="card-title">مواقع التسوق التركية</h5>
@@ -517,7 +555,7 @@
         </div>
         <div class="links">
           <ul class="list-unstyled">
-            <li><a href="">الشحن الجوي</a> <i class="fas fa-caret-down"></i>
+            <li class="mainfooterli"><a href="">الشحن الجوي</a> <i class="fas fa-caret-down"></i>
               <div class="submenue">
                 <ul class="list-unstyled">
                   <li><a href="">الرابط الاول طويل للتجربه</a></li>
@@ -526,15 +564,91 @@
                 </ul>
               </div>
             </li>
-            <li><a href="">الشحن البحري</a> <i class="fas fa-caret-down"></i></li>
-            <li><a href="">خدماتنا</a> <i class="fas fa-caret-down"></i></li>
-            <li><a href="">تجميع الشحنات</a></li>
-            <li><a href="">اشتري لي</a></li>
+            <li class="mainfooterli"><a href="">الشحن البحري</a> <i class="fas fa-caret-down"></i></li>
+            <li class="mainfooterli"><a href="">خدماتنا</a> <i class="fas fa-caret-down"></i></li>
+            <li class="mainfooterli"><a href="">تجميع الشحنات</a></li>
+            <li class="mainfooterli"><a href="">اشتري لي</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">اغلاق</button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled">
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
@@ -545,6 +659,7 @@
   <script src="./assets/js/bootstrap-select-country.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/html5lightbox.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

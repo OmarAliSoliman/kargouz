@@ -67,39 +67,41 @@
         </div>
         <div class="links">
           <ul class="list-unstyled mainlist">
-            <li><a href="">الشحن الجوي</a><i class="fas fa-caret-down"></i>
+            <li class="mainli"><a>الشحن الجوي</a><i class="fas fa-caret-down"></i>
               <div class="submenue">
                 <ul class="list-unstyled">
                   <li><a href="">الرابط الاول طويل للتجربه</a></li>
-                  <li><a href="">الرابط الثاني</a></li>
+                  <li><a href="./personal-air-freight.html">الشحن الشخصي - الجوي</a></li>
                   <li><a href="">الرابط الثالث</a></li>
                 </ul>
               </div>
             </li>
-            <li><a href="">الشحن البحري</a><i class="fas fa-caret-down"></i></li>
-            <li><a href="">خدماتنا</a><i class="fas fa-caret-down"></i></li>
-            <li><a href="">تجميع الشحنات</a></li>
-            <li><a href="">اشتري لي</a></li>
+            <li class="mainli"><a>الشحن البحري</a><i class="fas fa-caret-down"></i></li>
+            <li class="mainli"><a>خدماتنا</a><i class="fas fa-caret-down"></i></li>
+            <li class="mainli"><a href="">تجميع الشحنات</a></li>
+            <li class="mainli"><a href="">اشتري لي</a></li>
           </ul>
         </div>
         <div class="languge">
           <ul class="list-unstyled mainlist">
-            <li><a href="">English</a></li>
+            <li class="lang"><a href="">English</a></li>
             <li><span class="line"></span></li>
-            <li> <a class="parentlink currancy"> <i class="fas fa-caret-down"></i> <span> EGP </span> <img
-                  src="./assets/images/egypt.svg" alt=""> </a>
+            <li class="curr"> <a class="parentlink currancy" data-bs-toggle="modal" data-bs-target="#currencyModal"> <i
+                  class="fas fa-caret-down"></i> <span> EGP </span> <img src="./assets/images/egypt.svg" alt=""> </a>
             </li>
           </ul>
         </div>
         <div class="login">
           <ul class="list-unstyled mainlist">
-            <li><a href="" class="parentlink signup"> <img src="./assets/images/Icon feather-user.svg" alt="">
+            <li class="sgn"><a href="" class="parentlink signup"> <img src="./assets/images/Icon feather-user.svg"
+                  alt="">
                 <span>الاشتراك</span> </a></li>
             <li class="login"><a href="">تسجيل الدخول</a></li>
           </ul>
         </div>
         <div class="mobile-icon" onclick="openNav()">
-          <i class="fas fa-bars"></i>
+          <!-- <i class="fas fa-bars"></i> -->
+          <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt="">
         </div>
       </div>
     </div>
@@ -192,12 +194,90 @@
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">اغلاق</button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled">
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./assets/images/egypt.svg" alt="">
+                <span>جمهورية مصر العربية</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/slick.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script src="./assets/js/bootstrap-select-country.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
