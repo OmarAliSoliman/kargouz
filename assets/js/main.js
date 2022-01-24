@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   var currentDir = $("a").css("direction");
   console.log(currentDir);
-  
+
 
   if ($('.company-logo-slider').length) {
     $(".company-logo-slider").slick({
@@ -22,14 +22,13 @@ $(document).ready(function () {
       // centerMode: true,
       variableWidth: false,
       // centerPadding: '130px',
-      responsive: [
-        {
+      responsive: [{
           breakpoint: 1025,
           settings: {
             arrows: false,
             centerMode: false,
             centerPadding: '40px',
-            slidesToShow:5
+            slidesToShow: 5
           }
         },
         {
@@ -38,7 +37,7 @@ $(document).ready(function () {
             arrows: false,
             centerMode: false,
             centerPadding: '40px',
-            slidesToShow:4
+            slidesToShow: 4
           }
         },
         {
@@ -66,8 +65,7 @@ $(document).ready(function () {
   });
 
   $("#floating").click(() => {
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: 0,
       },
       50
@@ -86,23 +84,64 @@ $(document).ready(function () {
   });
 
 
-  if($(".countries").length)
-  $(".countries .country").map((index, con)=>{
-    $(con).on('click', function(){
-      let country = $(this).text();
-      let newsrc = $(this).find('img').attr('src')
-      let newtext = $(this).find('span').text();
-      $(this).closest(".form-group-parent").find("input").val(newtext);
-      $(this).closest(".form-group-parent").find(".chosen-country img").attr('src', newsrc)
-      $(this).closest(".form-group-parent").find(".chosen-country span").text(newtext);
+  if ($(".countries").length)
+    $(".countries .country").map((index, con) => {
+      $(con).on('click', function () {
+        let country = $(this).text();
+        let newsrc = $(this).find('img').attr('src')
+        let newtext = $(this).find('span').text();
+        $(this).closest(".form-group-parent").find("input").val(newtext);
+        $(this).closest(".form-group-parent").find(".chosen-country img").attr('src', newsrc)
+        $(this).closest(".form-group-parent").find(".chosen-country span").text(newtext);
+      })
     })
-  })
 
-  if($(".chosen-country").length){
-    $(".chosen-country").on('click', function(){
+  if ($(".chosen-country").length) {
+    $(".chosen-country").on('click', function () {
       $(this).closest(".form-group-parent").find(".countries").slideToggle();
     })
   }
+
+
+  if($(".dimentions").length){
+    $(".dimentions a").on('click', function(){
+      $(this).closest(".header-form").find(".enterdimentions").slideToggle();
+    })
+  }
+
+
+
+
+  // animation
+  // gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: section,
+  //     start: 'top 75%',
+  //     toggleActions: 'play none none none'
+  //   }
+  // })
+  // .from(line, { duration: 1, scale: 0, transformOrigin: 'center top'})
+  // .from(dot, { duration: 1, opacity: 0, scale: 0.5, ease: "elastic.out(1, 0.5)", transformOrigin: "center center" });
+
+  gsap.timeline().from('.mynavbar .logo', {
+    x: 100,
+    opacity: 0,
+    ease: "ease",
+    stagger: .1
+  }).from('.mynavbar .links .mainli', {
+    x: 100,
+    opacity: 0,
+    ease: "ease",
+    stagger: .4
+  })
+
+
+  gsap.timeline().from(".languge .lang", {x: -10,  opacity: 0, ease: "ease",}).from(".languge .curr", {x: 10,  opacity: 0, ease: "ease",})
+  // gsap.timeline().from(".languge .lang", {x: -10,  opacity: 0, ease: "ease",}).from(".languge .curr", {x: 10,  opacity: 0, ease: "ease",})
+
+
+
+
 
 });
 
@@ -114,7 +153,7 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.right = "-400px";
+  document.getElementById("mySidenav").style.right = "-100%";
   document.querySelector(".bg-sidenavOpen").style.display = "none";
   document.body.classList.remove("openMenuActive");
 }

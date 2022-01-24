@@ -438,6 +438,7 @@ input[type="number"] {
 .header {
   background-color: $mainColor;
   padding: 160px 0;
+  padding-top: 190px;
   .heder-content {
     height: 100%;
     display: flex;
@@ -494,6 +495,19 @@ input[type="number"] {
     background-color: #fff;
     padding: 28px;
     border-radius: 18px;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    z-index: 9999;
+    &::before{
+      position: absolute;
+      content: url('../images/form-img.svg');
+      width: 100%;
+      height: 100%;
+      right: -65px;
+      top: -89px;
+    }
     h5 {
       text-align: center;
       margin-bottom: 20px;
@@ -568,8 +582,51 @@ input[type="number"] {
         }
       }
     }
-
+    .dimentions{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: $secondColor;
+      text-decoration: underline;
+      position: relative;
+      z-index: 9999;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      a{
+        color: $secondColor;
+      }
+    }
+    .btn-submit{
+      position: relative;
+      z-index: 9999;
+      text-align: center;
+      .btn{
+        display: inline-flex;
+        align-items: center;
+        margin-top: 20px;
+        span{
+          display: inline-flex;
+        }
+        img{
+          margin-right: 5px;
+          display: inline-flex;
+        }
+      }
+    }
   }
+  .enterdimentions{
+    // opacity: 0;
+    // visibility: hidden;
+    // height: 0;
+    // transition: all .3s ease-in-out;
+    display: none;
+  }
+}
+
+.activeenterdiemntions{
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
 }
 
 /* shop-ship */
@@ -879,6 +936,9 @@ input[type="number"] {
   html {
     font-size: 13px;
   }
+  .header .header-form{
+    width: 100%;
+  }
 }
 
 @media (max-width: 991px) {
@@ -907,6 +967,9 @@ input[type="number"] {
       order: 3;
       margin: auto;
     }
+  }
+  .header .header-form::before{
+    display: none;
   }
 }
 
