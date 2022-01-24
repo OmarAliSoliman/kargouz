@@ -16,7 +16,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       autoplay: true,
       rtl: currentDir == "rtl" ? true : false,
-
+      autoplaySpeed: 1500,
       // centerMode: true,
       variableWidth: false,
       // centerPadding: '130px',
