@@ -394,6 +394,8 @@ input[type="number"] {
   transition: 0.5s;
   text-align: center;
   padding-bottom: 10px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .sidenav .logo {
@@ -712,6 +714,11 @@ input[type="number"] {
   color: #fff;
 }
 
+.mynavbar .wrapper .links .mainlist li {
+  margin-right: 7px;
+  margin-left: 17px;
+}
+
 .mynavbar .wrapper .languge li .line {
   height: 15px;
   width: 2px;
@@ -814,9 +821,10 @@ input[type="number"] {
 
 .header .header-form::before {
   position: absolute;
+  content: url("../images/form-img.svg");
   width: 100%;
   height: 100%;
-  right: -65px;
+  right: -70px;
   top: -89px;
 }
 
@@ -1204,6 +1212,13 @@ input[type="number"] {
 
 .company .slider-item .card img {
   width: 80%;
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5);
+}
+
+.company .slider-item .card:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 /* important-site */
@@ -1424,49 +1439,49 @@ input[type="number"] {
 }
 
 /* modal */
-#currencyModal {
+#currencyModal, #shipModal {
   z-index: 9999;
 }
 
-#currencyModal .modal-header {
+#currencyModal .modal-header, #shipModal .modal-header {
   padding: 0;
   color: #e3402b;
 }
 
-#currencyModal .modal-header .btn:focus {
+#currencyModal .modal-header .btn:focus, #shipModal .modal-header .btn:focus {
   outline: 0 !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#currencyModal .modal-body {
+#currencyModal .modal-body, #shipModal .modal-body {
   padding-top: 0;
 }
 
-#currencyModal ul li {
+#currencyModal ul li, #shipModal ul li {
   border-bottom: 1px solid #eee;
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-#currencyModal ul li a {
+#currencyModal ul li a, #shipModal ul li a {
   color: #000;
 }
 
-#currencyModal ul li.active {
+#currencyModal ul li.active, #shipModal ul li.active {
   background-color: #2d1c70;
 }
 
-#currencyModal ul li.active span {
+#currencyModal ul li.active span, #shipModal ul li.active span {
   color: #fff;
 }
 
-#currencyModal ul li:hover {
+#currencyModal ul li:hover, #shipModal ul li:hover {
   background-color: #2d1c70;
 }
 
-#currencyModal ul li:hover span {
+#currencyModal ul li:hover span, #shipModal ul li:hover span {
   color: #fff;
 }
 

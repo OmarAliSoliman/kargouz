@@ -80,29 +80,21 @@ $(document).ready(function () {
     $(this).children("i").toggleClass("iMenue");
   });
 
-  if ($(".countries").length)
-    $(".countries .country").map((index, con) => {
+  if ($("#shipModal").length)
+    $("#shipModal ul li").map((index, con) => {
       $(con).on("click", function () {
         let country = $(this).text();
         let newsrc = $(this).find("img").attr("src");
         let newtext = $(this).find("span").text();
-        $(this).closest(".form-group-parent").find("input").val(newtext);
-        $(this)
-          .closest(".form-group-parent")
-          .find(".chosen-country img")
-          .attr("src", newsrc);
-        $(this)
+        $(".shipfromwhere").find("input").val(newtext);
+        $(".shipfromwhere").find(".chosen-country img").attr("src", newsrc);
+        $(".shipfromwhere")
           .closest(".form-group-parent")
           .find(".chosen-country span")
           .text(newtext);
+        $(this).addClass("active").siblings().removeClass("active");
       });
     });
-
-  if ($(".chosen-country").length) {
-    $(".chosen-country").on("click", function () {
-      $(this).closest(".form-group-parent").find(".countries").slideToggle();
-    });
-  }
 
   if ($(".dimentions").length) {
     $(".dimentions a").on("click", function () {
@@ -110,63 +102,103 @@ $(document).ready(function () {
     });
   }
 
-  if($(".sidenav").length){
-    $(".sidenav ul li.parentsub").map((index, sub)=>{
+  if ($(".sidenav").length) {
+    $(".sidenav ul li.parentsub").map((index, sub) => {
       console.log($(this));
-      $(sub).on('click', function(){
+      $(sub).on("click", function () {
         $(this).find(".submenue").slideToggle();
-
-      })
-    })
+      });
+    });
   }
 
-
   // animation
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".shop-ship",
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    }
-  })
-  .from(".shop-ship .secton-header > *", { duration: 1, scale: 0, transformOrigin: 'center top', stagger: .4})
-  .from(".shop-ship ul li", {opacity: 0, y: -10, stagger: .5, ease: "back"}, "1")
-  .from(".shop-ship .ship-btn > *", {opacity: 0, y: -10, stagger: .5, ease: "ease"});
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".shop-ship",
+        start: "top 75%",
+        toggleActions: "play none none none",
+      },
+    })
+    .from(".shop-ship .secton-header > *", {
+      duration: 1,
+      scale: 0,
+      transformOrigin: "center top",
+      stagger: 0.4,
+    })
+    .from(
+      ".shop-ship ul li",
+      { opacity: 0, y: -10, stagger: 0.5, ease: "back" },
+      "1"
+    )
+    .from(".shop-ship .ship-btn > *", {
+      opacity: 0,
+      y: -10,
+      stagger: 0.5,
+      ease: "ease",
+    });
 
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".puyforme",
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    }
-  })
-  .from(".puyforme .secton-header > *", { duration: 1, scale: 0, transformOrigin: 'center top', stagger: .4})
-  .from(".puyforme ul li", {opacity: 0, y: 10, stagger: .5, ease: "back"}, "1")
-  .from(".puyforme .list-buttons > *", {opacity: 0, y: -10, stagger: .5, ease: "ease"});
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".puyforme",
+        start: "top 75%",
+        toggleActions: "play none none none",
+      },
+    })
+    .from(".puyforme .secton-header > *", {
+      duration: 1,
+      scale: 0,
+      transformOrigin: "center top",
+      stagger: 0.4,
+    })
+    .from(
+      ".puyforme ul li",
+      { opacity: 0, y: 10, stagger: 0.5, ease: "back" },
+      "1"
+    )
+    .from(".puyforme .list-buttons > *", {
+      opacity: 0,
+      y: -10,
+      stagger: 0.5,
+      ease: "ease",
+    });
 
-
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".important-site",
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    }
-  })
-  .from(".important-site .secton-header > *", { duration: 1, scale: 0, transformOrigin: 'center top', stagger: .4})
-  .from(".important-site .site-card", {opacity: 0, y: 10, stagger: .5, ease: "back"}, "1")
-  .from(".site-footer .logo", {x: 100, opacity: 0, ease: "ease"})
-  .from(".site-footer ul .mainfooterli", {opacity: 0, y: 10, stagger: .5, ease: "back"})
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".important-site",
+        start: "top 75%",
+        toggleActions: "play none none none",
+      },
+    })
+    .from(".important-site .secton-header > *", {
+      duration: 1,
+      scale: 0,
+      transformOrigin: "center top",
+      stagger: 0.4,
+    })
+    .from(
+      ".important-site .site-card",
+      { opacity: 0, y: 10, stagger: 0.5, ease: "back" },
+      "1"
+    )
+    .from(".site-footer .logo", { x: 100, opacity: 0, ease: "ease" })
+    .from(".site-footer ul .mainfooterli", {
+      opacity: 0,
+      y: 10,
+      stagger: 0.5,
+      ease: "back",
+    });
   // .from(".important-site .list-buttons > *", {opacity: 0, y: -10, stagger: .5, ease: "ease"});
-
 
   gsap.timeline({
     scrollTrigger: {
       trigger: ".site-footer",
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    }
-  })
- 
+      start: "top 75%",
+      toggleActions: "play none none none",
+    },
+  });
 
   gsap
     .timeline()
@@ -181,19 +213,30 @@ $(document).ready(function () {
       opacity: 0,
       ease: "ease",
       stagger: 0.4,
-    }).from(".header .header-form .form-group", {y: -10, opacity: 0, ease:"ease", stagger: .4}, ".5")
+    });
 
   gsap
     .timeline()
     .from(".languge .lang", { x: -10, opacity: 0, ease: "ease" })
     .from(".languge .curr", { x: 10, opacity: 0, ease: "ease" })
-    .from(".header .heder-content h5", { y: -10, opacity: 0, ease: "ease.In", duration: 1 })
+    .from(".header .heder-content h5", {
+      y: -10,
+      opacity: 0,
+      ease: "ease.In",
+      duration: 1,
+    })
     .from(".header .heder-content p", { y: -10, opacity: 0, ease: "ease.In" })
-    .from(".header .heder-content form", { y: 10, opacity: 0, ease: "ease.In" })
+    .from(".header .heder-content form", {
+      y: 10,
+      opacity: 0,
+      ease: "ease.In",
+    });
 });
 
 function openNav() {
   document.getElementById("mySidenav").style.right = "0";
+  document.getElementById("mySidenav").style.visibility = "visibile";
+  document.getElementById("mySidenav").style.opacity = "1";
   document.querySelector(".bg-sidenavOpen").style.display = "block";
   document.body.classList.add("openMenuActive");
 }
@@ -201,6 +244,8 @@ function openNav() {
 /* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.right = "-100%";
+  document.getElementById("mySidenav").style.visibility = "hidden";
+  document.getElementById("mySidenav").style.opacity = "0";
   document.querySelector(".bg-sidenavOpen").style.display = "none";
   document.body.classList.remove("openMenuActive");
 }
