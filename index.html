@@ -130,8 +130,8 @@
           </ul>
         </div>
         <div class="mobile-icon" onclick="openNav()">
-          <!-- <i class="fas fa-bars"></i> -->
-          <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt="">
+          <i class="fas fa-bars"></i>
+          <!-- <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt=""> -->
         </div>
       </div>
     </div>
@@ -143,7 +143,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="col-sm-12 col-md-12 col-lg-6 order2small">
             <div class="heder-content">
               <h5>كارجوز لوجيستيك</h5>
               <p>الجيل الجديد من خدمات الشحن عبر الانترنت</p>
@@ -158,7 +158,11 @@
               </form>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="col-sm-12 col-md-12 col-lg-6 contentheadersmall">
+            <div class="heder-content">
+              <h5>كارجوز لوجيستيك</h5>
+              <p>الجيل الجديد من خدمات الشحن عبر الانترنت</p>
+            </div>
             <div class="header-form">
               <!-- <img src="./assets/" alt=""> -->
               <h5>حساب سعر الشحن</h5>
@@ -202,7 +206,7 @@
                     <div class="form-group">
                       <label for="shapekg">وزن الشحنه</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="shapekg" placeholder="وزن الشحنه">
+                        <input type="number" class="form-control" id="shapekg" placeholder="وزن الشحنه">
                         <select class="input-group-text customselect" id="basic-addon2">
                           <option value="">Kg</option>
                           <option value="">LBS</option>
@@ -213,44 +217,8 @@
                   <div class="col-sm-12 col-md-12 col-lg-5">
                     <div class="form-group dimentionsparent">
                       <label for=""></label>
-                      <div class="dimentions">
+                      <div class="dimentions" data-bs-toggle="modal" data-bs-target="#enterDiemntionModal">
                         <a> <img src="./assets/images/dimentios.svg" alt=""> <span>ادخل ابعاد الشحنه</span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="enterdimentions">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-5 col-lg-4">
-                          <div class="form-group">
-                            <label for="">عدد القطع</label>
-                            <input type="number" name="" id="" class="form-control">
-                          </div>
-                        </div>
-                        <div class="col-sm-12 col-md-5 col-lg-8">
-                          <div class="form-group">
-                            <label for="">وزن القطعه (كغ)</label>
-                            <input type="number" name="" id="" class="form-control">
-                          </div>
-                        </div>
-                        <div class="col-sm-12 col-md-5 col-lg-4">
-                          <div class="form-group">
-                            <label for="">الطول (سم)</label>
-                            <input type="number" name="" id="" class="form-control">
-                          </div>
-                        </div>
-                        <div class="col-sm-12 col-md-5 col-lg-4">
-                          <div class="form-group">
-                            <label for="">العرض (سم)</label>
-                            <input type="number" name="" id="" class="form-control">
-                          </div>
-                        </div>
-                        <div class="col-sm-12 col-md-5 col-lg-4">
-                          <div class="form-group">
-                            <label for="">الارتفاع (سم)</label>
-                            <input type="number" name="" id="" class="form-control">
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -707,6 +675,61 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="enterDiemntionModal" tabindex="-1" aria-labelledby="enterDiemntionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">اغلاق</button>
+        </div>
+        <div class="modal-body">
+          <div class="enterdimentions">
+            <div class="row">
+              <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="form-group">
+                  <label for="">عدد القطع</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-8">
+                <div class="form-group">
+                  <label for="">وزن القطعه (كغ)</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="form-group">
+                  <label for="">الطول (سم)</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="form-group">
+                  <label for="">العرض (سم)</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-4">
+                <div class="form-group">
+                  <label for="">الارتفاع (سم)</label>
+                  <input type="number" name="" id="" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="btn-submit">
+                  <button type="submit" class="mainbtn btn"><span>عرض الاسعار</span><img
+                      src="./assets/images/Path 11852.svg" alt=""></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <script src="./assets/js/jquery-3.3.1.min.js"></script>

@@ -323,7 +323,7 @@ input[type="number"] {
 
 .mobile-icon i {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .path ul {
@@ -741,6 +741,7 @@ input[type="number"] {
   background-color: #2d1c70;
   padding: 160px 0;
   padding-top: 190px;
+  overflow: hidden;
 }
 
 .header .heder-content {
@@ -876,6 +877,7 @@ input[type="number"] {
   border-radius: 7px;
   border: 1px solid #dae0e4;
   height: 51px;
+  text-align: right;
 }
 
 .header .header-form .form-control::-webkit-input-placeholder {
@@ -1039,14 +1041,14 @@ input[type="number"] {
           align-items: center;
 }
 
-.header .enterdimentions {
-  display: none;
-}
-
 .activeenterdiemntions {
   opacity: 1 !important;
   visibility: visible !important;
   height: auto !important;
+}
+
+.contentheadersmall .heder-content {
+  display: none;
 }
 
 /* shop-ship */
@@ -1304,6 +1306,11 @@ input[type="number"] {
   font-weight: bold;
 }
 
+.page-content {
+  width: 80%;
+  margin: auto;
+}
+
 .page-content .card-image {
   text-align: center;
   margin-top: -150px;
@@ -1439,8 +1446,129 @@ input[type="number"] {
 }
 
 /* modal */
-#currencyModal, #shipModal {
+#enterDiemntionModal {
+  z-index: 999999;
+}
+
+#enterDiemntionModal .modal-header {
+  padding: 0;
+  color: #e3402b;
+}
+
+#enterDiemntionModal .modal-header .btn:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#enterDiemntionModal .modal-content {
+  padding: 30px;
+  border: 0;
+  border-radius: 10px;
+}
+
+#enterDiemntionModal .form-group {
+  position: relative;
+  margin-top: 20px;
+}
+
+#enterDiemntionModal .form-group label {
+  font-size: 0.8rem;
+  color: #2f2d34;
+  background-color: #fff;
+  position: absolute;
+  top: -11px;
+  z-index: 9;
+  right: 10px;
+}
+
+#enterDiemntionModal .form-group .nice-select {
+  width: 100%;
+  float: none;
+  text-align: right !important;
+  padding: .375rem .75rem;
+}
+
+#enterDiemntionModal .form-group .nice-select::after {
+  right: unset;
+  left: 10px;
+}
+
+#enterDiemntionModal .form-group .nice-select .list {
+  width: 100%;
+  text-align: right;
   z-index: 9999;
+}
+
+#enterDiemntionModal .form-group .nice-select .list .option {
+  text-align: right;
+  padding-right: 5px;
+}
+
+#enterDiemntionModal .form-control {
+  border-radius: 7px;
+  border: 1px solid #dae0e4;
+  height: 51px;
+  text-align: right;
+}
+
+#enterDiemntionModal .form-control::-webkit-input-placeholder {
+  font-size: .9rem;
+  color: #000;
+}
+
+#enterDiemntionModal .form-control:-ms-input-placeholder {
+  font-size: .9rem;
+  color: #000;
+}
+
+#enterDiemntionModal .form-control::-ms-input-placeholder {
+  font-size: .9rem;
+  color: #000;
+}
+
+#enterDiemntionModal .form-control::placeholder {
+  font-size: .9rem;
+  color: #000;
+}
+
+#enterDiemntionModal .form-control:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#enterDiemntionModal .btn-submit {
+  position: relative;
+  z-index: 99;
+  text-align: center;
+}
+
+#enterDiemntionModal .btn-submit .btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+#enterDiemntionModal .btn-submit .btn span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#enterDiemntionModal .btn-submit .btn img {
+  margin-right: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#currencyModal, #shipModal {
+  z-index: 999999;
 }
 
 #currencyModal .modal-header, #shipModal .modal-header {
@@ -1452,6 +1580,12 @@ input[type="number"] {
   outline: 0 !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+#currencyModal .modal-content, #shipModal .modal-content {
+  padding: 30px;
+  border: 0;
+  border-radius: 10px;
 }
 
 #currencyModal .modal-body, #shipModal .modal-body {
@@ -1490,7 +1624,11 @@ input[type="number"] {
     font-size: 13px;
   }
   .header .header-form {
-    width: 100%;
+    width: 90%;
+  }
+  .header .header-form::before {
+    right: -82px;
+    top: -94px;
   }
 }
 
@@ -1519,8 +1657,34 @@ input[type="number"] {
             order: 3;
     margin: auto;
   }
-  .header .header-form::before {
+  .header .header-form {
+    margin-top: 30px;
+  }
+  .header .heder-content {
+    width: 100%;
+    text-align: center;
+  }
+  .header .header-form {
+    width: 60%;
+    margin-bottom: 120px;
+    margin-top: 120px;
+  }
+  .order2small {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .order2small .heder-content {
+    height: auto;
+  }
+  .order2small .heder-content h5, .order2small .heder-content p {
     display: none;
+  }
+  .contentheadersmall .heder-content {
+    height: auto;
+  }
+  .contentheadersmall .heder-content h5, .contentheadersmall .heder-content p {
+    display: block;
   }
 }
 
@@ -1581,6 +1745,16 @@ input[type="number"] {
             flex-direction: column;
   }
   .site-footer .wrapper ul {
+    display: none;
+  }
+  .page-content {
+    width: 100%;
+  }
+  .header .header-form {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .header .header-form::before {
     display: none;
   }
 }

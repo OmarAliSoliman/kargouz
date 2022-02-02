@@ -96,11 +96,11 @@ $(document).ready(function () {
       });
     });
 
-  if ($(".dimentions").length) {
-    $(".dimentions a").on("click", function () {
-      $(this).closest(".header-form").find(".enterdimentions").slideToggle();
-    });
-  }
+  // if ($(".dimentions").length) {
+  //   $(".dimentions a").on("click", function () {
+  //     $(this).closest(".header-form").find(".enterdimentions").slideToggle();
+  //   });
+  // }
 
   if ($(".sidenav").length) {
     $(".sidenav ul li.parentsub").map((index, sub) => {
@@ -110,6 +110,8 @@ $(document).ready(function () {
       });
     });
   }
+
+
 
   // animation
   gsap
@@ -235,7 +237,7 @@ $(document).ready(function () {
 
 function openNav() {
   document.getElementById("mySidenav").style.right = "0";
-  document.getElementById("mySidenav").style.visibility = "visibile";
+  document.getElementById("mySidenav").style.visibility = "visible";
   document.getElementById("mySidenav").style.opacity = "1";
   document.querySelector(".bg-sidenavOpen").style.display = "block";
   document.body.classList.add("openMenuActive");
