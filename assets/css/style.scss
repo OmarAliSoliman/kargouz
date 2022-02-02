@@ -64,7 +64,7 @@ input[type="number"] {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 99999;
+  z-index: 999999999999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,6 +265,33 @@ input[type="number"] {
   }
 }
 
+
+#floating {
+  position: fixed;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 5px;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.16);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: all 0.5s;
+  i {
+    color: $mainColor;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
 /* Side Nav */
 
 .openMenuActive {
@@ -462,7 +489,7 @@ input[type="number"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    position: relative;
     .mainlist {
       display: flex;
       align-items: center;
@@ -588,11 +615,114 @@ input[type="number"] {
       }
     }
   }
+
+  .menu {
+    // width: 40px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 15px;
+    cursor: pointer;
+    z-index: 9999999;
+    /* Icon 1 */
+
+    #nav-icon1,
+    #nav-icon2,
+    #nav-icon3,
+    #nav-icon4 {
+      width: 2.8rem;
+      height: 40px;
+      position: relative;
+      // margin: 50px auto;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    #nav-icon1 span,
+    #nav-icon3 span,
+    #nav-icon4 span {
+      display: block;
+      position: absolute;
+      height: .2rem;
+      width: 100%;
+      background: #fff;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.45s ease-in-out;
+      -moz-transition: 0.45s ease-in-out;
+      -o-transition: 0.45s ease-in-out;
+      transition: 0.45s ease-in-out;
+    }
+
+    #nav-icon1 span:nth-child(1) {
+      top: 0px;
+    }
+
+    #nav-icon1 span:nth-child(2) {
+      top: 10px;
+    }
+
+    #nav-icon1 span:nth-child(3) {
+      top: 20px;
+    }
+
+    #nav-icon1.open span{
+      background-color: $mainColor;
+    }
+
+    #nav-icon1.open span:nth-child(2) {
+      top: 18px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+
+    #nav-icon1.open span:nth-child(1) {
+      opacity: 0;
+      top: -60px;
+    }
+
+    #nav-icon1.open span:nth-child(3) {
+      top: 18px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.openBurgerMenu{
+  right: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  // display: block !important;
+}
+
+.burgerMenubodybg{
+  display: block !important;
 }
 
 .anouthernavbar {
   position: unset;
   background-color: $mainColor;
+  .menu{
+    margin-top: 8px;
+  }
 }
 
 
@@ -943,6 +1073,11 @@ input[type="number"] {
         background-color: #d63a26;
         color: #fff;
       }
+    }
+  }
+  .puyformemobilecontent{
+    .list-buttons{
+      display: none;
     }
   }
 }
@@ -1312,7 +1447,7 @@ input[type="number"] {
       display: none;
     }
   }
-  .mobile-icon {
+  .mynavbar .menu {
     display: block;
   }
   .header .heder-content h5 {
@@ -1355,9 +1490,7 @@ input[type="number"] {
   .contentheadersmall{
     .heder-content{
       height: auto;
-      h5, p{
-        display: block;
-      }
+      display: block;
     }
   }
 }
@@ -1417,6 +1550,20 @@ input[type="number"] {
   }
   .header .header-form::before{
     display: none;
+  }
+  .puyforme{
+    .puyfordesktopcontent{
+      .list-buttons{
+        display: none;
+
+      }
+    }
+  }
+  .puyformemobilecontent{
+    text-align: center;
+    .list-buttons{
+      display: block !important;
+    }
   }
 }
 

@@ -59,7 +59,7 @@ input[type="number"] {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 99999;
+  z-index: 999999999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,6 +355,41 @@ input[type="number"] {
   content: "";
 }
 
+#floating {
+  position: fixed;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 5px;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#floating i {
+  color: #2d1c70;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 /* Side Nav */
 .openMenuActive {
   height: 100%;
@@ -579,6 +614,7 @@ input[type="number"] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .mynavbar .wrapper .mainlist {
@@ -731,9 +767,99 @@ input[type="number"] {
   margin-left: 5px;
 }
 
+.mynavbar .menu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 15px;
+  cursor: pointer;
+  z-index: 9999999;
+  /* Icon 1 */
+}
+
+.mynavbar .menu #nav-icon1,
+.mynavbar .menu #nav-icon2,
+.mynavbar .menu #nav-icon3,
+.mynavbar .menu #nav-icon4 {
+  width: 2.8rem;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.mynavbar .menu #nav-icon1 span,
+.mynavbar .menu #nav-icon3 span,
+.mynavbar .menu #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: .2rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.45s ease-in-out;
+  transition: 0.45s ease-in-out;
+}
+
+.mynavbar .menu #nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+.mynavbar .menu #nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+.mynavbar .menu #nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+.mynavbar .menu #nav-icon1.open span {
+  background-color: #2d1c70;
+}
+
+.mynavbar .menu #nav-icon1.open span:nth-child(2) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.mynavbar .menu #nav-icon1.open span:nth-child(1) {
+  opacity: 0;
+  top: -60px;
+}
+
+.mynavbar .menu #nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.openBurgerMenu {
+  right: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.burgerMenubodybg {
+  display: block !important;
+}
+
 .anouthernavbar {
   position: unset;
   background-color: #2d1c70;
+}
+
+.anouthernavbar .menu {
+  margin-top: 8px;
 }
 
 /* section header */
@@ -1175,6 +1301,10 @@ input[type="number"] {
 .puyforme .list-buttons .mainbtn:hover {
   background-color: #d63a26;
   color: #fff;
+}
+
+.puyforme .puyformemobilecontent .list-buttons {
+  display: none;
 }
 
 /* company */
@@ -1641,7 +1771,7 @@ input[type="number"] {
   .mynavbar .login {
     display: none;
   }
-  .mobile-icon {
+  .mynavbar .menu {
     display: block;
   }
   .header .heder-content h5 {
@@ -1682,8 +1812,6 @@ input[type="number"] {
   }
   .contentheadersmall .heder-content {
     height: auto;
-  }
-  .contentheadersmall .heder-content h5, .contentheadersmall .heder-content p {
     display: block;
   }
 }
@@ -1756,6 +1884,15 @@ input[type="number"] {
   }
   .header .header-form::before {
     display: none;
+  }
+  .puyforme .puyfordesktopcontent .list-buttons {
+    display: none;
+  }
+  .puyformemobilecontent {
+    text-align: center;
+  }
+  .puyformemobilecontent .list-buttons {
+    display: block !important;
   }
 }
 

@@ -53,9 +53,9 @@
       <div class="logo">
         <img src="./assets/images/logo.svg" alt="">
       </div>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
         <i class="fas fa-times"></i>
-      </a>
+      </a> -->
       <ul class="list-unstyled links">
         <li class="parentsub active"><a><span>الشحن الجوي </span><i class="fas fa-caret-down"></i></a>
           <div class="submenue">
@@ -129,9 +129,17 @@
             <li class="login"><a href="">تسجيل الدخول</a></li>
           </ul>
         </div>
-        <div class="mobile-icon" onclick="openNav()">
+        <!-- <div class="mobile-icon" onclick="openNav()">
           <i class="fas fa-bars"></i>
-          <!-- <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt=""> -->
+          <img src="./assets/images/menu-svgrepo-com.svg" style="width: 25px;" alt="">
+        </div> -->
+        <div class="menu">
+          <!-- <img src="./assets/images/menu.svg" alt=""> -->
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -298,7 +306,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="puyforme-content">
+          <div class="puyforme-content puyfordesktopcontent">
             <div class="secton-header">
               <h6>خدمة اشتري لي</h6>
               <h5>نقوم بالشراء لكم من جميع
@@ -323,8 +331,14 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="payforme-img">
+          <div class="payforme-img puyforme-content puyformemobilecontent">
             <img src="./assets/images/payforme.png" alt="">
+            <div class="list-buttons">
+              <a href="https://www.youtube.com/watch?v=paxGiEt-FoE" class="btn secondbtn html5lightbox"><img
+                  src="./assets/images/Icon feather-play-circle2.svg" alt=""><span>فيديو
+                  تفصيلي</span></a>
+              <a href="" class="btn mainbtn">الذهاب إلى مركز التجميع</a>
+            </div>
           </div>
         </div>
       </div>
@@ -728,6 +742,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="floating">
+    <i class="fas fa-chevron-up"></i>
   </div>
 
 

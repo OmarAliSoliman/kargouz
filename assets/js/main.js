@@ -54,10 +54,10 @@ $(document).ready(function () {
 
   $(window).scroll(() => {
     if ($(this).scrollTop() > 20) {
-      $(".navbar").addClass("fixed-navbar");
-      $("#floating").css("opacity", "0.8");
+      $(".mynavbar").addClass("fixed-navbar");
+      $("#floating").css("opacity", "1");
     } else {
-      $(".navbar").removeClass("fixed-navbar");
+      $(".mynavbar").removeClass("fixed-navbar");
       $("#floating").css("opacity", "0");
     }
   });
@@ -233,24 +233,34 @@ $(document).ready(function () {
       opacity: 0,
       ease: "ease.In",
     });
+
+
+
+    $("#nav-icon1").click(function () {
+      $(this).toggleClass("open");
+      $("body").toggleClass("openMenuActive");
+      $("#mySidenav").toggleClass("openBurgerMenu");
+      $(".bg-sidenavOpen").toggleClass("burgerMenubodybg");
+      $(this).closest(".customnavbar").find(".logo").fadeToggle();
+    });
 });
 
-function openNav() {
-  document.getElementById("mySidenav").style.right = "0";
-  document.getElementById("mySidenav").style.visibility = "visible";
-  document.getElementById("mySidenav").style.opacity = "1";
-  document.querySelector(".bg-sidenavOpen").style.display = "block";
-  document.body.classList.add("openMenuActive");
-}
+// function openNav() {
+//   document.getElementById("mySidenav").style.right = "0";
+//   document.getElementById("mySidenav").style.visibility = "visible";
+//   document.getElementById("mySidenav").style.opacity = "1";
+//   document.querySelector(".bg-sidenavOpen").style.display = "block";
+//   document.body.classList.add("openMenuActive");
+// }
 
 /* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.right = "-100%";
-  document.getElementById("mySidenav").style.visibility = "hidden";
-  document.getElementById("mySidenav").style.opacity = "0";
-  document.querySelector(".bg-sidenavOpen").style.display = "none";
-  document.body.classList.remove("openMenuActive");
-}
+// function closeNav() {
+//   document.getElementById("mySidenav").style.right = "-100%";
+//   document.getElementById("mySidenav").style.visibility = "hidden";
+//   document.getElementById("mySidenav").style.opacity = "0";
+//   document.querySelector(".bg-sidenavOpen").style.display = "none";
+//   document.body.classList.remove("openMenuActive");
+// }
 
 const splash = document.querySelector(".splash");
 
