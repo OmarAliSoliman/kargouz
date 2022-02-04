@@ -86,19 +86,6 @@ input[type="number"] {
   margin: 0 32px;
 }
 
-.splash .loading-container:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
-  border-radius: 10px;
-  -webkit-animation: movingLine 2.4s infinite ease-in-out;
-          animation: movingLine 2.4s infinite ease-in-out;
-}
-
 @-webkit-keyframes movingLine {
   0% {
     opacity: 0;
@@ -538,10 +525,6 @@ input[type="number"] {
   font-family: "Cairo", sans-serif;
 }
 
-.sidenav .social {
-  margin-top: 30px;
-}
-
 .sidenav .social ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,6 +573,50 @@ input[type="number"] {
 
 .sidenav .sidenavmenueParent ul li a {
   padding: 5px 20px;
+}
+
+.sidenav .lang-cur ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidenav .lang-cur ul li {
+  margin: 5px;
+}
+
+.sidenav .lang-cur ul li a {
+  font-size: 1rem;
+  color: #000 !important;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidenav .lang-cur ul li img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 20px;
+}
+
+.sidenav .lang-cur ul span.line {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 10px;
+  width: 2px;
+  background-color: #e3402b;
 }
 
 #html5-watermark {
@@ -765,6 +792,10 @@ input[type="number"] {
 .mynavbar .wrapper .languge li i {
   margin-right: 0;
   margin-left: 5px;
+}
+
+.mynavbar .wrapper .languge li img {
+  width: 20px;
 }
 
 .mynavbar .menu {
@@ -1165,6 +1196,12 @@ input[type="number"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 1439px) {
+  .header-form {
+    width: 69% !important;
+  }
 }
 
 .activeenterdiemntions {
@@ -1577,7 +1614,7 @@ input[type="number"] {
 
 /* modal */
 #enterDiemntionModal {
-  z-index: 999999;
+  z-index: 999999999999999999;
 }
 
 #enterDiemntionModal .modal-header {
@@ -1698,7 +1735,7 @@ input[type="number"] {
 }
 
 #currencyModal, #shipModal {
-  z-index: 999999;
+  z-index: 999999999999999999;
 }
 
 #currencyModal .modal-header, #shipModal .modal-header {
@@ -1731,6 +1768,13 @@ input[type="number"] {
 
 #currencyModal ul li a, #shipModal ul li a {
   color: #000;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#currencyModal ul li a img, #shipModal ul li a img {
+  width: 25px;
 }
 
 #currencyModal ul li.active, #shipModal ul li.active {
@@ -1787,6 +1831,10 @@ input[type="number"] {
             order: 3;
     margin: auto;
   }
+  .header {
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
   .header .header-form {
     margin-top: 30px;
   }
@@ -1796,8 +1844,8 @@ input[type="number"] {
   }
   .header .header-form {
     width: 60%;
-    margin-bottom: 120px;
-    margin-top: 120px;
+    margin-bottom: 50px;
+    margin-top: 80px;
   }
   .order2small {
     -webkit-box-ordinal-group: 3;

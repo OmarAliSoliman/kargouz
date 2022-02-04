@@ -267,5 +267,5 @@ const splash = document.querySelector(".splash");
 document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     splash.classList.add("splashdisplayNone");
-  }, 1000);
+  }, 2000);
 });
