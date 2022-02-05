@@ -73,8 +73,8 @@ input[type="number"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all .9s ease-in-out;
-  transition: all .9s ease-in-out;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .splash .loading-container {
@@ -91,7 +91,8 @@ input[type="number"] {
     opacity: 0;
     width: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     opacity: 0.8;
     width: 100%;
   }
@@ -112,7 +113,8 @@ input[type="number"] {
     opacity: 0;
     width: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     opacity: 0.8;
     width: 100%;
   }
@@ -194,7 +196,8 @@ input[type="number"] {
             transform: translateX(-15vw);
     opacity: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
@@ -212,7 +215,8 @@ input[type="number"] {
             transform: translateX(-15vw);
     opacity: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
@@ -829,7 +833,7 @@ input[type="number"] {
 .mynavbar .menu #nav-icon4 span {
   display: block;
   position: absolute;
-  height: .2rem;
+  height: 0.2rem;
   width: 100%;
   background: #fff;
   border-radius: 9px;
@@ -974,7 +978,6 @@ input[type="number"] {
   width: 80%;
   margin: auto;
   position: relative;
-  z-index: 9999;
 }
 
 .header .header-form::before {
@@ -1011,7 +1014,7 @@ input[type="number"] {
   width: 100%;
   float: none;
   text-align: right !important;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
 }
 
 .header .header-form .form-group .nice-select::after {
@@ -1038,22 +1041,22 @@ input[type="number"] {
 }
 
 .header .header-form .form-control::-webkit-input-placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #000;
 }
 
 .header .header-form .form-control:-ms-input-placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #000;
 }
 
 .header .header-form .form-control::-ms-input-placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #000;
 }
 
 .header .header-form .form-control::placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #000;
 }
 
@@ -1093,7 +1096,7 @@ input[type="number"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   cursor: pointer;
 }
 
@@ -1138,8 +1141,8 @@ input[type="number"] {
   position: relative;
   z-index: 99;
   cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header .header-form .dimentions a {
@@ -1612,6 +1615,129 @@ input[type="number"] {
           transform: translateY(3px);
 }
 
+.modal .modal-header {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  border: 0;
+}
+
+.modal .modal-header i {
+  color: rgba(112, 112, 112, 0.507);
+}
+
+.modal .modal-content {
+  border-radius: 8px;
+}
+
+.modal .form-group {
+  position: relative;
+  margin-top: 20px;
+}
+
+.modal .form-group label {
+  font-size: 0.8rem;
+  color: #2f2d34;
+  background-color: #fff;
+  position: absolute;
+  top: -11px;
+  z-index: 9;
+  right: 10px;
+}
+
+.modal .form-group i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.modal .form-group .nice-select {
+  width: 100%;
+  float: none;
+  text-align: right !important;
+  padding: 0.375rem 0.75rem;
+}
+
+.modal .form-group .nice-select::after {
+  right: unset;
+  left: 10px;
+}
+
+.modal .form-group .nice-select .list {
+  width: 100%;
+  text-align: right;
+  z-index: 9999;
+}
+
+.modal .form-group .nice-select .list .option {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.modal .form-control {
+  border-radius: 7px;
+  border: 1px solid #dae0e4;
+  height: 51px;
+  text-align: right;
+}
+
+.modal .form-control::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.modal .form-control:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.modal .form-control::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.modal .form-control::placeholder {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.modal .form-control:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.modal .btn-submit {
+  position: relative;
+  z-index: 99;
+  text-align: center;
+}
+
+.modal .btn-submit .btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.modal .btn-submit .btn span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.modal .btn-submit .btn img {
+  margin-right: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 /* modal */
 #enterDiemntionModal {
   z-index: 999999999999999999;
@@ -1629,168 +1755,237 @@ input[type="number"] {
 }
 
 #enterDiemntionModal .modal-content {
-  padding: 30px;
   border: 0;
   border-radius: 10px;
 }
 
-#enterDiemntionModal .form-group {
-  position: relative;
-  margin-top: 20px;
-}
-
-#enterDiemntionModal .form-group label {
-  font-size: 0.8rem;
-  color: #2f2d34;
-  background-color: #fff;
-  position: absolute;
-  top: -11px;
-  z-index: 9;
-  right: 10px;
-}
-
-#enterDiemntionModal .form-group .nice-select {
-  width: 100%;
-  float: none;
-  text-align: right !important;
-  padding: .375rem .75rem;
-}
-
-#enterDiemntionModal .form-group .nice-select::after {
-  right: unset;
-  left: 10px;
-}
-
-#enterDiemntionModal .form-group .nice-select .list {
-  width: 100%;
-  text-align: right;
-  z-index: 9999;
-}
-
-#enterDiemntionModal .form-group .nice-select .list .option {
-  text-align: right;
-  padding-right: 5px;
-}
-
-#enterDiemntionModal .form-control {
-  border-radius: 7px;
-  border: 1px solid #dae0e4;
-  height: 51px;
-  text-align: right;
-}
-
-#enterDiemntionModal .form-control::-webkit-input-placeholder {
-  font-size: .9rem;
-  color: #000;
-}
-
-#enterDiemntionModal .form-control:-ms-input-placeholder {
-  font-size: .9rem;
-  color: #000;
-}
-
-#enterDiemntionModal .form-control::-ms-input-placeholder {
-  font-size: .9rem;
-  color: #000;
-}
-
-#enterDiemntionModal .form-control::placeholder {
-  font-size: .9rem;
-  color: #000;
-}
-
-#enterDiemntionModal .form-control:focus {
-  outline: 0 !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-#enterDiemntionModal .btn-submit {
-  position: relative;
-  z-index: 99;
-  text-align: center;
-}
-
-#enterDiemntionModal .btn-submit .btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 30px;
-}
-
-#enterDiemntionModal .btn-submit .btn span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-#enterDiemntionModal .btn-submit .btn img {
-  margin-right: 5px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-#currencyModal, #shipModal {
+#currencyModal,
+#shipModal {
   z-index: 999999999999999999;
 }
 
-#currencyModal .modal-header, #shipModal .modal-header {
+#currencyModal .modal-header,
+#shipModal .modal-header {
   padding: 0;
   color: #e3402b;
 }
 
-#currencyModal .modal-header .btn:focus, #shipModal .modal-header .btn:focus {
+#currencyModal .modal-header .btn:focus,
+#shipModal .modal-header .btn:focus {
   outline: 0 !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#currencyModal .modal-content, #shipModal .modal-content {
-  padding: 30px;
+#currencyModal .modal-content,
+#shipModal .modal-content {
   border: 0;
   border-radius: 10px;
 }
 
-#currencyModal .modal-body, #shipModal .modal-body {
+#currencyModal .modal-body,
+#shipModal .modal-body {
   padding-top: 0;
 }
 
-#currencyModal ul li, #shipModal ul li {
+#currencyModal ul li,
+#shipModal ul li {
   border-bottom: 1px solid #eee;
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-#currencyModal ul li a, #shipModal ul li a {
+#currencyModal ul li a,
+#shipModal ul li a {
   color: #000;
   display: block;
   height: 100%;
   width: 100%;
 }
 
-#currencyModal ul li a img, #shipModal ul li a img {
+#currencyModal ul li a img,
+#shipModal ul li a img {
   width: 25px;
 }
 
-#currencyModal ul li.active, #shipModal ul li.active {
+#currencyModal ul li.active,
+#shipModal ul li.active {
   background-color: #2d1c70;
 }
 
-#currencyModal ul li.active span, #shipModal ul li.active span {
+#currencyModal ul li.active span,
+#shipModal ul li.active span {
   color: #fff;
 }
 
-#currencyModal ul li:hover, #shipModal ul li:hover {
+#currencyModal ul li:hover,
+#shipModal ul li:hover {
   background-color: #2d1c70;
 }
 
-#currencyModal ul li:hover span, #shipModal ul li:hover span {
+#currencyModal ul li:hover span,
+#shipModal ul li:hover span {
   color: #fff;
+}
+
+#loginRigister {
+  z-index: 999999999999999999;
+}
+
+#loginRigister .modal-header {
+  padding: 0;
+  border: 0;
+  padding-bottom: 0;
+}
+
+#loginRigister .modal-content,
+#loginRigister .modal-body {
+  border: 0;
+}
+
+#loginRigister .modal-body {
+  padding: 30px;
+  padding-top: 0;
+}
+
+#loginRigister .modal-body .nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginRigister .modal-body .nav .nav-item .nav-link {
+  color: #2f2d34;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.253);
+  border-radius: 0;
+}
+
+#loginRigister .modal-body .nav .nav-item .nav-link.active {
+  background-color: transparent;
+  color: #e3402b;
+  border-color: #e3402b;
+}
+
+#loginRigister .modal-body .form-group {
+  margin-top: 25px;
+}
+
+#loginRigister .modal-body .form-control {
+  padding-right: 35px;
+}
+
+#loginRigister .modal-body .form-control::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control::placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .forger-password {
+  margin-top: 14px;
+}
+
+#loginRigister .modal-body .forger-password ul {
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#loginRigister .modal-body .forger-password ul li {
+  font-size: 0.9rem;
+}
+
+#loginRigister .modal-body .forger-password ul a {
+  color: #e3402b;
+}
+
+#loginRigister .modal-body .orlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 40px;
+}
+
+#loginRigister .modal-body .orlogin span {
+  width: 123px;
+  height: 1px;
+  background-color: rgba(112, 112, 112, 0.205);
+}
+
+#loginRigister .modal-body .orlogin h3 {
+  margin: 0;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  font-size: 0.9rem;
+  color: #2f2d34;
+}
+
+#loginRigister .modal-body .orlogin-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginRigister .modal-body .orlogin-social ul li {
+  border-radius: 20px;
+  margin: 10px;
+}
+
+#loginRigister .modal-body .orlogin-social ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 5px 27px;
+}
+
+#loginRigister .modal-body .orlogin-social ul li span,
+#loginRigister .modal-body .orlogin-social ul li i {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+#loginRigister .modal-body .orlogin-social ul li span {
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1024px) {
@@ -1855,7 +2050,8 @@ input[type="number"] {
   .order2small .heder-content {
     height: auto;
   }
-  .order2small .heder-content h5, .order2small .heder-content p {
+  .order2small .heder-content h5,
+  .order2small .heder-content p {
     display: none;
   }
   .contentheadersmall .heder-content {
