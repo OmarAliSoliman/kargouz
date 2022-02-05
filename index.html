@@ -71,7 +71,7 @@
         <li class="parentsub"><a> <span>خدماتنا</span> <i class="fas fa-caret-down"></i></a></li>
         <li><a href="">تجميع الشحنات</a></li>
         <li><a href="">اشتري لي</a></li>
-        <li><a href="">الاشتراك</a></li>
+        <li><a data-bs-toggle="modal" data-bs-target="#loginRigister">الاشتراك</a></li>
         <li><a href="">تسجيل الدخول</a></li>
       </ul>
       <!-- <div class="lang">
@@ -584,7 +584,13 @@
                 </div>
                 <div class="forger-password">
                   <ul class="list-unstyled">
-                    <li>تذكرني دائماً</li>
+                    <li>
+                      <label class="container">
+                        <span class="word-label">تذكرني دائما</span>
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
                     <li><a href="">هل نسيت كلمة المرور ؟</a></li>
                   </ul>
                 </div>
@@ -592,21 +598,77 @@
                   <button type="submit" class="mainbtn btn"><span>تسجيل الدخول</span><img
                       src="./assets/images/Path 11852.svg" alt=""></button>
                 </div>
-                <div class="orlogin">
-                  <span></span>
-                  <h3>او سجل تسجيل الدخول بواسطة</h3>
-                  <span></span>
+              </form>
+              <div class="orlogin">
+                <span></span>
+                <h3>او سجل تسجيل الدخول بواسطة</h3>
+                <span></span>
+              </div>
+              <div class="orlogin-social">
+                <ul class="list-unstyled">
+                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a></li>
+                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a></li>
+                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+              </div>  
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form action="">
+                <div class="form-group">
+                  <label for="">اسم المستخدم</label>
+                  <i class="fas fa-user"></i>
+                  <input type="text" class="form-control" placeholder="سجل اسمك هنا">
                 </div>
-                <div class="orlogin-social">
+                <div class="form-group">
+                  <label for="">بريد المستخدم</label>
+                  <i class="fas fa-user-circle"></i>
+                  <input type="email" class="form-control" placeholder="سجل بريدك هنا">
+                </div>
+                <div class="form-group">
+                  <label for="">رقم الهاتف</label>
+                  <i class="fas fa-phone"></i>
+                  <input type="email" class="form-control" placeholder="سجل هاتفك هنا">
+                </div>
+                <div class="form-group">
+                  <label for="">الرقم السري</label>
+                  <i class="fas fa-lock"></i>
+                  <input type="password" class="form-control" placeholder="اكتب الرقم السري هنا">
+                </div>
+                <div class="form-group">
+                  <label for="">تأكيد الرقم السري</label>
+                  <i class="fas fa-lock"></i>
+                  <input type="password" class="form-control" placeholder="اكد الرقم السري هنا">
+                </div>
+                <!-- <div class="forger-password">
                   <ul class="list-unstyled">
-                    <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a></li>
-                    <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a></li>
-                    <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i class="fab fa-facebook-f"></i></a></li>
+                    <li>
+                      <label class="container">
+                        <span class="word-label">تذكرني دائما</span>
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li><a href="">هل نسيت كلمة المرور ؟</a></li>
                   </ul>
+                </div> -->
+                <div class="btn-submit">
+                  <button type="submit" class="mainbtn btn"><span>التسجيل</span><img
+                      src="./assets/images/Path 11852.svg" alt=""></button>
                 </div>
               </form>
+              <div class="orlogin">
+                <span></span>
+                <h3>او سجل حساب جديد بواسطة</h3>
+                <span></span>
+              </div>
+              <div class="orlogin-social">
+                <ul class="list-unstyled">
+                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a></li>
+                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a></li>
+                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+              </div>  
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">تسجيل حساب جديد</div>
           </div>
         </div>
       </div>

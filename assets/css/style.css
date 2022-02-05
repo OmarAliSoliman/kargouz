@@ -1865,6 +1865,12 @@ input[type="number"] {
   border-radius: 0;
 }
 
+#loginRigister .modal-body .nav .nav-item .nav-link:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 #loginRigister .modal-body .nav .nav-item .nav-link.active {
   background-color: transparent;
   color: #e3402b;
@@ -1924,6 +1930,83 @@ input[type="number"] {
   color: #e3402b;
 }
 
+#loginRigister .modal-body .forger-password .container {
+  display: inline;
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loginRigister .modal-body .forger-password .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid #e3402b;
+  background-color: #e3402b;
+  border-radius: 50%;
+}
+
+#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#loginRigister .modal-body .forger-password .container .checkmark {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .checkmark {
+  position: absolute;
+  top: unset;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #2d1c70;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
 #loginRigister .modal-body .orlogin {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1951,6 +2034,7 @@ input[type="number"] {
           flex: unset;
   font-size: 0.9rem;
   color: #2f2d34;
+  text-align: center;
 }
 
 #loginRigister .modal-body .orlogin-social ul {
@@ -1968,6 +2052,8 @@ input[type="number"] {
 #loginRigister .modal-body .orlogin-social ul li {
   border-radius: 20px;
   margin: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #loginRigister .modal-body .orlogin-social ul li a {
@@ -1986,6 +2072,10 @@ input[type="number"] {
 
 #loginRigister .modal-body .orlogin-social ul li span {
   font-size: 0.9rem;
+}
+
+#loginRigister .modal-body .orlogin-social ul li:hover {
+  opacity: .8;
 }
 
 @media (max-width: 1024px) {
@@ -2012,6 +2102,7 @@ input[type="number"] {
   }
   .mynavbar .menu {
     display: block;
+    margin-top: 8px;
   }
   .header .heder-content h5 {
     font-size: 2.5rem;
@@ -2137,6 +2228,14 @@ input[type="number"] {
   }
   .puyformemobilecontent .list-buttons {
     display: block !important;
+  }
+  #loginRigister .modal-body .orlogin-social ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #loginRigister .modal-body .orlogin-social ul li {
+    margin: 0;
+    margin: 5px;
   }
 }
 

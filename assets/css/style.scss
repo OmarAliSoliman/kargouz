@@ -1501,6 +1501,10 @@ input[type="number"] {
           font-size: 0.9rem;
           border-bottom: 1px solid rgba(112, 112, 112, 0.253);
           border-radius: 0;
+          &:focus{
+            outline: 0 !important;
+            box-shadow: none !important;
+          }
           &.active {
             background-color: transparent;
             color: $secondColor;
@@ -1533,6 +1537,73 @@ input[type="number"] {
           color: $secondColor;
         }
       }
+      .container {
+        display: inline;
+        position: relative;
+        padding-right: 20px;
+        // margin-bottom: 12px;
+        cursor: pointer;
+        font-size: .9rem;
+        font-weight: 600;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          transition: all .3s ease-in-out;
+          &:checked {
+            ~ {
+              .checkmark {
+                background-color: #fff;
+                border: 1px solid $secondColor;
+                background-color: $secondColor;
+                border-radius: 50%;
+                &:after {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .checkmark {
+          transition: all .3s ease-in-out;
+          &:after {
+            left: 4px;
+            top: 1px;
+            width: 6px;
+            height: 9px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+      .checkmark {
+        position: absolute;
+        top: unset;
+        right: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        border: 1px solid $mainColor;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }
     }
     .orlogin {
       display: flex;
@@ -1550,6 +1621,7 @@ input[type="number"] {
         flex: unset;
         font-size: 0.9rem;
         color: #2f2d34;
+        text-align: center;
       }
     }
     .orlogin-social {
@@ -1560,6 +1632,7 @@ input[type="number"] {
         li {
           border-radius: 20px;
           margin: 10px;
+          transition: all .3s ease-in-out;
           a{
             display: block;
             height: 100%;
@@ -1574,6 +1647,9 @@ input[type="number"] {
           }
           span {
             font-size: 0.9rem;
+          }
+          &:hover{
+            opacity: .8;
           }
         }
       }
@@ -1607,6 +1683,7 @@ input[type="number"] {
   }
   .mynavbar .menu {
     display: block;
+    margin-top: 8px;
   }
   .header .heder-content h5 {
     font-size: 2.5rem;
@@ -1725,6 +1802,14 @@ input[type="number"] {
     text-align: center;
     .list-buttons {
       display: block !important;
+    }
+  }
+  #loginRigister .modal-body .orlogin-social ul{
+    // flex-direction: column;
+    flex-wrap: wrap;
+    li{
+      margin: 0;
+      margin: 5px;
     }
   }
 }
