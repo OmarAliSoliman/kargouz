@@ -244,11 +244,26 @@ $(document).ready(function () {
       $(this).closest(".customnavbar").find(".logo").fadeToggle();
     });
 
-    new SimpleBar(document.querySelector('#loginRigister .modal-body'));
-    new SimpleBar(document.querySelector('#followShip .modal-body'));
-    new SimpleBar(document.querySelector('#shipModal .modal-body'));
-    new SimpleBar(document.querySelector('#currencyModal .modal-body'));
-    new SimpleBar(document.querySelector('#enterDiemntionModal .modal-body'));
+    if($("#loginRigister").length){
+      new SimpleBar(document.querySelector('#loginRigister .modal-body'));
+    }
+
+    if($("#followShip").length){
+      new SimpleBar(document.querySelector('#followShip .modal-body'));
+    }
+    
+    if($("#shipModal").length){
+      new SimpleBar(document.querySelector('#shipModal .modal-body'));
+    }
+    
+    if($("#currencyModal").length){
+      new SimpleBar(document.querySelector('#currencyModal .modal-body'));
+    }
+    
+    if($("#enterDiemntionModal").length){
+      new SimpleBar(document.querySelector('#enterDiemntionModal .modal-body'));
+    }
+
 
 
   if($('.toopensigntab').length){
