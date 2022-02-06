@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: "Cairo", sans-serif;
+  padding-right: 0 !important;
 }
 
 input:focus,
@@ -939,6 +940,7 @@ input[type="number"] {
   height: 45px;
   border: 1px solid #fff;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .header .heder-content form .input-group input {
@@ -967,7 +969,7 @@ input[type="number"] {
 }
 
 .header .heder-content form .input-group .input-group-append .input-group-text:hover {
-  background-color: #dadada;
+  opacity: 0.8;
 }
 
 .header .header-form {
@@ -1615,15 +1617,515 @@ input[type="number"] {
           transform: translateY(3px);
 }
 
+/* modal */
+#enterDiemntionModal {
+  z-index: 999999999999999999;
+}
+
+#enterDiemntionModal .modal-header {
+  color: #e3402b;
+}
+
+#enterDiemntionModal .modal-header .btn:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#enterDiemntionModal .modal-content {
+  border: 0;
+  border-radius: 10px;
+}
+
+#enterDiemntionModal .modal-body {
+  height: auto;
+}
+
+#currencyModal,
+#shipModal {
+  z-index: 999999999999999999;
+}
+
+#currencyModal .modal-header,
+#shipModal .modal-header {
+  color: #e3402b;
+}
+
+#currencyModal .modal-header .btn:focus,
+#shipModal .modal-header .btn:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#currencyModal .modal-content,
+#shipModal .modal-content {
+  border: 0;
+  border-radius: 8px;
+}
+
+#currencyModal .modal-body,
+#shipModal .modal-body {
+  padding-top: 0;
+}
+
+#currencyModal .modal-body .curr-ship-head,
+#shipModal .modal-body .curr-ship-head {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+
+#currencyModal .modal-body .curr-ship-head span,
+#shipModal .modal-body .curr-ship-head span {
+  color: #e3402b;
+}
+
+#currencyModal ul li,
+#shipModal ul li {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#currencyModal ul li a,
+#shipModal ul li a {
+  color: #000;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#currencyModal ul li a img,
+#shipModal ul li a img {
+  width: 25px;
+}
+
+#currencyModal ul li.active,
+#shipModal ul li.active {
+  background-color: #2d1c70;
+}
+
+#currencyModal ul li.active span,
+#shipModal ul li.active span {
+  color: #fff;
+}
+
+#currencyModal ul li:hover,
+#shipModal ul li:hover {
+  background-color: #2d1c70;
+}
+
+#currencyModal ul li:hover span,
+#shipModal ul li:hover span {
+  color: #fff;
+}
+
+#loginRigister {
+  z-index: 999999999999999999;
+}
+
+#loginRigister .modal-content,
+#loginRigister .modal-body {
+  border: 0;
+}
+
+#loginRigister .modal-body {
+  padding: 30px;
+  padding-top: 0;
+}
+
+#loginRigister .modal-body .nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginRigister .modal-body .nav .nav-item .nav-link {
+  color: #2f2d34;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.253);
+  border-radius: 0;
+}
+
+#loginRigister .modal-body .nav .nav-item .nav-link:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#loginRigister .modal-body .nav .nav-item .nav-link.active {
+  background-color: transparent;
+  color: #e3402b;
+  border-color: #e3402b;
+}
+
+#loginRigister .modal-body .form-group {
+  margin-top: 25px;
+}
+
+#loginRigister .modal-body .form-control {
+  padding-right: 35px;
+}
+
+#loginRigister .modal-body .form-control::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .form-control::placeholder {
+  font-size: 0.9rem;
+  color: rgba(47, 45, 52, 0.322);
+}
+
+#loginRigister .modal-body .forger-password {
+  margin-top: 14px;
+}
+
+#loginRigister .modal-body .forger-password ul {
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#loginRigister .modal-body .forger-password ul li {
+  font-size: 0.9rem;
+}
+
+#loginRigister .modal-body .forger-password ul a {
+  color: #e3402b;
+}
+
+#loginRigister .modal-body .forger-password .container {
+  display: inline;
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loginRigister .modal-body .forger-password .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid #e3402b;
+  background-color: #e3402b;
+  border-radius: 50%;
+}
+
+#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#loginRigister .modal-body .forger-password .container .checkmark {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .checkmark {
+  position: absolute;
+  top: unset;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #2d1c70;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#loginRigister .modal-body .forger-password .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#loginRigister .modal-body .orlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 40px;
+}
+
+#loginRigister .modal-body .orlogin span {
+  width: 123px;
+  height: 1px;
+  background-color: rgba(112, 112, 112, 0.205);
+}
+
+#loginRigister .modal-body .orlogin h3 {
+  margin: 0;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  font-size: 0.9rem;
+  color: #2f2d34;
+  text-align: center;
+}
+
+#loginRigister .modal-body .orlogin-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginRigister .modal-body .orlogin-social ul li {
+  border-radius: 20px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#loginRigister .modal-body .orlogin-social ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 5px 27px;
+}
+
+#loginRigister .modal-body .orlogin-social ul li span,
+#loginRigister .modal-body .orlogin-social ul li i {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+#loginRigister .modal-body .orlogin-social ul li span {
+  font-size: 0.9rem;
+}
+
+#loginRigister .modal-body .orlogin-social ul li:hover {
+  opacity: 0.8;
+}
+
+#followShip {
+  z-index: 999999999999999999;
+}
+
+#followShip .modal-body .shipname {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#followShip .modal-body .shipname h5 {
+  font-size: 1rem;
+}
+
+#followShip .modal-body .shipname h5 span {
+  color: #e3402b;
+}
+
+#followShip .modal-body .ship-info {
+  background-color: rgba(227, 64, 43, 0.205);
+  padding: 15px 23px;
+  border-radius: 4px;
+}
+
+#followShip .modal-body .ship-info ul {
+  margin-bottom: 0;
+  width: 60%;
+}
+
+#followShip .modal-body .ship-info ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#followShip .modal-body .ship-info ul li span {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+#followShip .modal-body .ship-info ul li span:last-child {
+  color: #e3402b;
+}
+
+#followShip .modal-body .ship-status {
+  margin-top: 25px;
+}
+
+#followShip .modal-body .ship-status ul {
+  margin-bottom: 0;
+}
+
+#followShip .modal-body .ship-status ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid rgba(47, 45, 52, 0.1);
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+#followShip .modal-body .ship-status .shipimgparent {
+  position: relative;
+  text-align: center;
+  margin-left: 8px;
+}
+
+#followShip .modal-body .ship-status .shipimgparent .option {
+  margin-top: 13px;
+}
+
+#followShip .modal-body .ship-status .shipimgparent .option i {
+  color: #e3402b;
+  font-size: 1rem;
+}
+
+#followShip .modal-body .ship-status .shimg {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 1px solid #e3402b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+#followShip .modal-body .ship-status .shinf p,
+#followShip .modal-body .ship-status .shinf h5 {
+  margin: 0;
+}
+
+#followShip .modal-body .ship-status .shinf h5 {
+  color: #2f2d34;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#followShip .modal-body .ship-status .shinf p {
+  font-size: 0.9rem;
+  color: #e3402b;
+}
+
+#followShip .modal-body .ship-status .shinf .date {
+  direction: ltr;
+}
+
+#followShip .modal-body .ship-status .shinf .date span {
+  font-size: 0.8rem;
+  color: rgba(47, 45, 52, 0.404);
+}
+
 .modal .modal-header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
   border: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-left: 0;
 }
 
 .modal .modal-header i {
   color: rgba(112, 112, 112, 0.507);
+}
+
+.modal .modal-content {
+  border-radius: 8px;
+  border: 0;
+  padding: 10px;
+  padding-top: 0 !important;
+}
+
+.modal .modal-body {
+  padding-top: 0;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.modal .btn:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .modal .modal-content {
@@ -1738,344 +2240,27 @@ input[type="number"] {
   display: inline-flex;
 }
 
-/* modal */
-#enterDiemntionModal {
-  z-index: 999999999999999999;
+.simplebar-track {
+  right: unset !important;
+  left: 0;
 }
 
-#enterDiemntionModal .modal-header {
-  padding: 0;
-  color: #e3402b;
-}
-
-#enterDiemntionModal .modal-header .btn:focus {
-  outline: 0 !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#enterDiemntionModal .modal-content {
-  border: 0;
-  border-radius: 10px;
-}
-
-#currencyModal,
-#shipModal {
-  z-index: 999999999999999999;
-}
-
-#currencyModal .modal-header,
-#shipModal .modal-header {
-  padding: 0;
-  color: #e3402b;
-}
-
-#currencyModal .modal-header .btn:focus,
-#shipModal .modal-header .btn:focus {
-  outline: 0 !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#currencyModal .modal-content,
-#shipModal .modal-content {
-  border: 0;
-  border-radius: 10px;
-}
-
-#currencyModal .modal-body,
-#shipModal .modal-body {
-  padding-top: 0;
-}
-
-#currencyModal ul li,
-#shipModal ul li {
-  border-bottom: 1px solid #eee;
-  padding: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#currencyModal ul li a,
-#shipModal ul li a {
-  color: #000;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-#currencyModal ul li a img,
-#shipModal ul li a img {
-  width: 25px;
-}
-
-#currencyModal ul li.active,
-#shipModal ul li.active {
-  background-color: #2d1c70;
-}
-
-#currencyModal ul li.active span,
-#shipModal ul li.active span {
-  color: #fff;
-}
-
-#currencyModal ul li:hover,
-#shipModal ul li:hover {
-  background-color: #2d1c70;
-}
-
-#currencyModal ul li:hover span,
-#shipModal ul li:hover span {
-  color: #fff;
-}
-
-#loginRigister {
-  z-index: 999999999999999999;
-}
-
-#loginRigister .modal-header {
-  padding: 0;
-  border: 0;
-  padding-bottom: 0;
-}
-
-#loginRigister .modal-content,
-#loginRigister .modal-body {
-  border: 0;
-}
-
-#loginRigister .modal-body {
-  padding: 30px;
-  padding-top: 0;
-}
-
-#loginRigister .modal-body .nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#loginRigister .modal-body .nav .nav-item .nav-link {
-  color: #2f2d34;
-  font-size: 0.9rem;
-  border-bottom: 1px solid rgba(112, 112, 112, 0.253);
-  border-radius: 0;
-}
-
-#loginRigister .modal-body .nav .nav-item .nav-link:focus {
-  outline: 0 !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-#loginRigister .modal-body .nav .nav-item .nav-link.active {
-  background-color: transparent;
-  color: #e3402b;
-  border-color: #e3402b;
-}
-
-#loginRigister .modal-body .form-group {
-  margin-top: 25px;
-}
-
-#loginRigister .modal-body .form-control {
-  padding-right: 35px;
-}
-
-#loginRigister .modal-body .form-control::-webkit-input-placeholder {
-  font-size: 0.9rem;
-  color: rgba(47, 45, 52, 0.322);
-}
-
-#loginRigister .modal-body .form-control:-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: rgba(47, 45, 52, 0.322);
-}
-
-#loginRigister .modal-body .form-control::-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: rgba(47, 45, 52, 0.322);
-}
-
-#loginRigister .modal-body .form-control::placeholder {
-  font-size: 0.9rem;
-  color: rgba(47, 45, 52, 0.322);
-}
-
-#loginRigister .modal-body .forger-password {
-  margin-top: 14px;
-}
-
-#loginRigister .modal-body .forger-password ul {
-  margin-bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#loginRigister .modal-body .forger-password ul li {
-  font-size: 0.9rem;
-}
-
-#loginRigister .modal-body .forger-password ul a {
-  color: #e3402b;
-}
-
-#loginRigister .modal-body .forger-password .container {
-  display: inline;
-  position: relative;
-  padding-right: 20px;
-  cursor: pointer;
-  font-size: .9rem;
-  font-weight: 600;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#loginRigister .modal-body .forger-password .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark {
-  background-color: #fff;
-  border: 1px solid #e3402b;
-  background-color: #e3402b;
-  border-radius: 50%;
-}
-
-#loginRigister .modal-body .forger-password .container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-#loginRigister .modal-body .forger-password .container .checkmark {
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#loginRigister .modal-body .forger-password .container .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 6px;
-  height: 9px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#loginRigister .modal-body .forger-password .checkmark {
-  position: absolute;
-  top: unset;
-  right: 0;
-  height: 16px;
-  width: 16px;
-  background-color: #fff;
-  border: 1px solid #2d1c70;
-  border-radius: 50%;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#loginRigister .modal-body .forger-password .checkmark:after {
+.simplebar-track::after {
+  height: 98%;
   content: "";
+  background-color: #707070;
+  width: 1px;
   position: absolute;
-  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-#loginRigister .modal-body .orlogin {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 26px;
-  margin-bottom: 40px;
-}
-
-#loginRigister .modal-body .orlogin span {
-  width: 123px;
-  height: 1px;
-  background-color: rgba(112, 112, 112, 0.205);
-}
-
-#loginRigister .modal-body .orlogin h3 {
-  margin: 0;
-  -webkit-box-flex: unset;
-      -ms-flex: unset;
-          flex: unset;
-  font-size: 0.9rem;
-  color: #2f2d34;
-  text-align: center;
-}
-
-#loginRigister .modal-body .orlogin-social ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#loginRigister .modal-body .orlogin-social ul li {
-  border-radius: 20px;
-  margin: 10px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#loginRigister .modal-body .orlogin-social ul li a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 5px 27px;
-}
-
-#loginRigister .modal-body .orlogin-social ul li span,
-#loginRigister .modal-body .orlogin-social ul li i {
-  color: #fff;
-  font-size: 0.9rem;
-  margin-right: 5px;
-}
-
-#loginRigister .modal-body .orlogin-social ul li span {
-  font-size: 0.9rem;
-}
-
-#loginRigister .modal-body .orlogin-social ul li:hover {
-  opacity: .8;
+.simplebar-track .simplebar-scrollbar:before {
+  background-color: #e3402b;
+  opacity: 1 !important;
 }
 
 @media (max-width: 1024px) {
@@ -2236,6 +2421,9 @@ input[type="number"] {
   #loginRigister .modal-body .orlogin-social ul li {
     margin: 0;
     margin: 5px;
+  }
+  #followShip .modal-body .ship-info ul {
+    width: 100%;
   }
 }
 

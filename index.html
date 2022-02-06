@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="./assets/css/slick-theme.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/bootstrap-select-country.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="./assets/css/icons.css">
   <title>Home</title>
 </head>
 
-<body>
+<body class="mainbody">
 
   <!-- my sidenav -->
   <!-- sidenav -->
@@ -58,7 +59,7 @@
         <i class="fas fa-times"></i>
       </a> -->
       <ul class="list-unstyled links">
-        <li class="parentsub active"><a><span>الشحن الجوي </span><i class="fas fa-caret-down"></i></a>
+        <li class="parentsub active"><a><span>الشحن الجوي </span><i class="fas fa-angle-down"></i></a>
           <div class="submenue">
             <ul class="list-unstyled">
               <li><a href="">الرابط الاول طويل للتجربه</a></li>
@@ -67,12 +68,12 @@
             </ul>
           </div>
         </li>
-        <li class="parentsub"><a><span>الشحن البحري</span> <i class="fas fa-caret-down"></i></a></li>
-        <li class="parentsub"><a> <span>خدماتنا</span> <i class="fas fa-caret-down"></i></a></li>
+        <li class="parentsub"><a><span>الشحن البحري</span> <i class="fas fa-angle-down"></i></a></li>
+        <li class="parentsub"><a> <span>خدماتنا</span> <i class="fas fa-angle-down"></i></a></li>
         <li><a href="">تجميع الشحنات</a></li>
         <li><a href="">اشتري لي</a></li>
-        <li><a data-bs-toggle="modal" data-bs-target="#loginRigister">الاشتراك</a></li>
-        <li><a href="">تسجيل الدخول</a></li>
+        <li class="toopensigntab"><a data-bs-toggle="modal" data-bs-target="#loginRigister">الاشتراك</a></li>
+        <li class="toopenlogintab"><a data-bs-toggle="modal" data-bs-target="#loginRigister">تسجيل الدخول</a></li>
       </ul>
       <!-- <div class="lang">
          <a href="<?php echo $baseURL.$navBarLang ?>">Arabic</a>
@@ -82,7 +83,8 @@
         <ul class="list-unstyled">
           <li><a href="">English</a></li>
           <li><span class="line"></span></li>
-          <li><a data-bs-toggle="modal" data-bs-target="#currencyModal"> <span>EGP</span> <img src="./assets/images/egypt.svg" alt=""></a></li>
+          <li><a data-bs-toggle="modal" data-bs-target="#currencyModal"> <span>EGP</span> <img
+                src="./assets/images/egypt.svg" alt=""></a></li>
         </ul>
       </div>
 
@@ -100,6 +102,8 @@
 
 
   <!-- navbar -->
+
+  <!-- in auther page there are an additional class added to the navbar section -->
 
   <section class="mynavbar">
     <div class="container">
@@ -135,10 +139,10 @@
         </div>
         <div class="login">
           <ul class="list-unstyled mainlist">
-            <li class="sgn"><a class="parentlink signup" data-bs-toggle="modal" data-bs-target="#loginRigister"> <img src="./assets/images/Icon feather-user.svg"
-                  alt="">
+            <li class="sgn toopensigntab"><a class="parentlink signup" data-bs-toggle="modal" data-bs-target="#loginRigister"> <img
+                  src="./assets/images/Icon feather-user.svg" alt="">
                 <span>الاشتراك</span> </a></li>
-            <li class="login"><a href="">تسجيل الدخول</a></li>
+            <li class="login toopenlogintab"><a data-bs-toggle="modal" data-bs-target="#loginRigister">تسجيل الدخول</a></li>
           </ul>
         </div>
         <!-- <div class="mobile-icon" onclick="openNav()">
@@ -168,11 +172,11 @@
               <h5>كارجوز لوجيستيك</h5>
               <p>الجيل الجديد من خدمات الشحن عبر الانترنت</p>
               <form action="">
-                <div class="input-group">
+                <div class="input-group" data-bs-toggle="modal" data-bs-target="#followShip">
                   <input type="text" class="form-control" placeholder="ضع رقم الشحنة" aria-label="ضع رقم الشحنة"
                     aria-describedby="basic-addon2">
                   <div class="input-group-append">
-                    <button class="input-group-text" id="basic-addon2">تعقب الشحنات</button>
+                    <span class="input-group-text" id="basic-addon2">تعقب الشحنات</span>
                   </div>
                 </div>
               </form>
@@ -551,9 +555,142 @@
   </footer>
 
 
+
+  <!-- followShip modal -->
+  <div class="modal fade" id="followShip" tabindex="-1" aria-labelledby="followShipLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="shipname">
+            <h5>تعقب الشحنة رقم <span>12345678</span></h5>
+          </div>
+          <div class="ship-info">
+            <ul class="list-unstyled">
+              <li> <span>مصدر الشحنة</span> <span>United Kingdom</span></li>
+              <li> <span>وجهة الشحنة</span> <span>Hartford</span></li>
+              <li> <span>الوقت المتوقع للتسليم</span> <span>2021/11/17</span></li>
+            </ul>
+          </div>
+          <div class="ship-status">
+            <ul class="list-unstyled">
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shipimgparent">
+                  <div class="shimg">
+                    <img src="./assets/images/location.svg" alt="">
+                  </div>
+                  <div class="option">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="shinf">
+                  <h5>Shipment is at nearest collection depot.</h5>
+                  <p>Petaling Jaya</p>
+                  <div class="date">
+                    <span>2021/11/17</span> <span>~</span> <span> 13:44</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- login modal -->
   <div class="modal fade" id="loginRigister" tabindex="-1" aria-labelledby="loginRigisterLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
@@ -563,10 +700,12 @@
         <div class="modal-body">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">تسجيل الدخول</button>
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">تسجيل الدخول</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">تسجيل حساب جديد</button>
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">تسجيل حساب جديد</button>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
@@ -606,11 +745,14 @@
               </div>
               <div class="orlogin-social">
                 <ul class="list-unstyled">
-                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a></li>
-                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a></li>
-                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i class="fab fa-facebook-f"></i></a></li>
+                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a>
+                  </li>
+                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i
+                        class="fab fa-facebook-f"></i></a></li>
                 </ul>
-              </div>  
+              </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <form action="">
@@ -663,11 +805,14 @@
               </div>
               <div class="orlogin-social">
                 <ul class="list-unstyled">
-                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a></li>
-                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a></li>
-                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i class="fab fa-facebook-f"></i></a></li>
+                  <li style="background-color: #21A2F8;"><a href=""><span>تويتر</span><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li style="background-color: #DD3535;"><a href=""><span>جوجل</span><i class="fab fa-google"></i></a>
+                  </li>
+                  <li style="background-color: #0E479C;"><a href=""><span>فيس بوك</span><i
+                        class="fab fa-facebook-f"></i></a></li>
                 </ul>
-              </div>  
+              </div>
             </div>
           </div>
         </div>
@@ -678,13 +823,15 @@
   <!-- ship modal -->
   <!-- Modal -->
   <div class="modal fade" id="shipModal" tabindex="-1" aria-labelledby="shipModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
             <i class="fas fa-times"></i>
-          </button>        </div>
+          </button>
+        </div>
         <div class="modal-body">
+          <h5 class="curr-ship-head">اود الشحن من <span>تركيا</span> الى</h5>
           <ul class="list-unstyled">
             <li>
               <a href="">
@@ -752,15 +899,17 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- currency Modal -->
   <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
             <i class="fas fa-times"></i>
-          </button>        </div>
+          </button>
+        </div>
         <div class="modal-body">
+          <h5 class="curr-ship-head">اختر <span>العمله</span> المناسبه</h5>
           <ul class="list-unstyled">
             <li>
               <a href="">
@@ -828,15 +977,16 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- ]dimention Modal -->
   <div class="modal fade" id="enterDiemntionModal" tabindex="-1" aria-labelledby="enterDiemntionModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
             <i class="fas fa-times"></i>
-          </button>        </div>
+          </button>
+        </div>
         <div class="modal-body">
           <div class="enterdimentions">
             <div class="row">
@@ -897,6 +1047,7 @@
   <script src="./assets/js/bootstrap-select-country.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="./assets/js/html5lightbox.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>

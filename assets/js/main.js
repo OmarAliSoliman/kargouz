@@ -185,13 +185,13 @@ $(document).ready(function () {
       { opacity: 0, y: 10, stagger: 0.5, ease: "back" },
       "1"
     )
-    .from(".site-footer .logo", { x: 100, opacity: 0, ease: "ease" })
+    .from(".site-footer .logo", { x: 100, opacity: 0, ease: "ease" }, "<")
     .from(".site-footer ul .mainfooterli", {
       opacity: 0,
       y: 10,
       stagger: 0.5,
       ease: "back",
-    });
+    }, "<");
   // .from(".important-site .list-buttons > *", {opacity: 0, y: -10, stagger: .5, ease: "ease"});
 
   gsap.timeline({
@@ -243,6 +243,28 @@ $(document).ready(function () {
       $(".bg-sidenavOpen").toggleClass("burgerMenubodybg");
       $(this).closest(".customnavbar").find(".logo").fadeToggle();
     });
+
+    new SimpleBar(document.querySelector('#loginRigister .modal-body'));
+    new SimpleBar(document.querySelector('#followShip .modal-body'));
+    new SimpleBar(document.querySelector('#shipModal .modal-body'));
+    new SimpleBar(document.querySelector('#currencyModal .modal-body'));
+    new SimpleBar(document.querySelector('#enterDiemntionModal .modal-body'));
+
+
+  if($('.toopensigntab').length){
+    $(".toopensigntab").on('click', function (e) {
+      e.preventDefault();
+      $("#loginRigister #pills-profile-tab").click();
+    })
+  }
+
+  if($('.toopenlogintab').length){
+    $(".toopenlogintab").on('click', function (e) {
+      e.preventDefault();
+      $("#loginRigister #pills-home-tab").click();
+    })
+  }
+
 });
 
 // function openNav() {
