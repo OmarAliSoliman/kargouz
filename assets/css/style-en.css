@@ -1153,8 +1153,9 @@ input[type="number"] {
 
 .header .header-form .btn-submit {
   position: relative;
-  z-index: 99;
+  /* // z-index: 99; */
   text-align: center;
+  margin-top: 15px;
 }
 
 .header .header-form .btn-submit .btn {

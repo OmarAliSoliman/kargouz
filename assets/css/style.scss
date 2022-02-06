@@ -955,8 +955,9 @@ input[type="number"] {
     }
     .btn-submit {
       position: relative;
-      z-index: 99;
+      // z-index: 99;
       text-align: center;
+      margin-top: 15px;
       .btn {
         display: inline-flex;
         align-items: center;
